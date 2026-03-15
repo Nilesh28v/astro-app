@@ -1,0 +1,2226 @@
+{
+  "planets": [
+    {
+      "id": "sun",
+      "name": "Sun (Surya)",
+      "symbol": "☉",
+      "nature": "Malefic",
+      "gender": "Male",
+      "element": "Fire",
+      "gemstone": "Ruby (Manikya)",
+      "metal": "Gold",
+      "color": "Orange / Copper",
+      "rulingDay": "Sunday",
+      "mantra": "Om Hraam Hreem Hraum Sah Suryaya Namah",
+      "exaltation": "Aries (10°)",
+      "debilitation": "Libra (10°)",
+      "friends": [
+        "Moon",
+        "Mars",
+        "Jupiter"
+      ],
+      "enemies": [
+        "Venus",
+        "Saturn"
+      ],
+      "neutral": [
+        "Mercury"
+      ],
+      "description": "The Sun is the Atmakaraka, the significator of the soul in Vedic astrology. It represents our core identity, willpower, and the divine spark within. As the king of the celestial cabinet, the Sun governs authority, leadership, government positions, and paternal lineage. A strong Sun in the birth chart bestows confidence, vitality, and a commanding presence, while a weak or afflicted Sun may lead to low self-esteem, health issues related to the heart or bones, and conflicts with authority figures.",
+      "significance": "Soul, ego, father, government, authority, vitality, bones, heart, right eye, self-confidence, leadership, and spiritual illumination."
+    },
+    {
+      "id": "moon",
+      "name": "Moon (Chandra)",
+      "symbol": "☽",
+      "nature": "Benefic",
+      "gender": "Female",
+      "element": "Water",
+      "gemstone": "Pearl (Moti)",
+      "metal": "Silver",
+      "color": "White / Cream",
+      "rulingDay": "Monday",
+      "mantra": "Om Shraam Shreem Shraum Sah Chandraya Namah",
+      "exaltation": "Taurus (3°)",
+      "debilitation": "Scorpio (3°)",
+      "friends": [
+        "Sun",
+        "Mercury"
+      ],
+      "enemies": [
+        "None"
+      ],
+      "neutral": [
+        "Mars",
+        "Jupiter",
+        "Venus",
+        "Saturn"
+      ],
+      "description": "The Moon is the queen of the planetary cabinet and the karaka (significator) of the mind. It governs emotions, mental stability, imagination, and our capacity for empathy and nurturing. The Moon's placement determines the Rashi (Moon sign), which many Vedic astrologers consider even more important than the Sun sign. A well-placed Moon grants emotional intelligence, popularity, and inner peace, while an afflicted Moon can lead to anxiety, depression, and instability in relationships.",
+      "significance": "Mind, mother, emotions, mental peace, public image, fertility, fluids in the body, left eye, sleep patterns, imagination, and intuitive capacity."
+    },
+    {
+      "id": "mars",
+      "name": "Mars (Mangala)",
+      "symbol": "♂",
+      "nature": "Malefic",
+      "gender": "Male",
+      "element": "Fire",
+      "gemstone": "Red Coral (Moonga)",
+      "metal": "Copper",
+      "color": "Red",
+      "rulingDay": "Tuesday",
+      "mantra": "Om Kraam Kreem Kraum Sah Bhaumaya Namah",
+      "exaltation": "Capricorn (28°)",
+      "debilitation": "Cancer (28°)",
+      "friends": [
+        "Sun",
+        "Moon",
+        "Jupiter"
+      ],
+      "enemies": [
+        "Mercury"
+      ],
+      "neutral": [
+        "Venus",
+        "Saturn"
+      ],
+      "description": "Mars is the commander-in-chief of the planetary army. It represents raw energy, courage, physical stamina, and the warrior spirit. Mars governs our capacity for action, competition, and assertiveness. In the birth chart, Mars determines one's Manglik status, which significantly impacts marriage compatibility. A strong Mars gives technical abilities, athletic prowess, and the courage to overcome obstacles. An afflicted Mars may result in aggression, accidents, surgical interventions, or conflicts with siblings.",
+      "significance": "Courage, energy, siblings (younger), land, property, blood, muscles, accidents, surgery, military, police, sports, technical skills, and ambition."
+    },
+    {
+      "id": "mercury",
+      "name": "Mercury (Budha)",
+      "symbol": "☿",
+      "nature": "Benefic (when alone or with benefics)",
+      "gender": "Neutral",
+      "element": "Earth",
+      "gemstone": "Emerald (Panna)",
+      "metal": "Bronze / Alloy",
+      "color": "Green",
+      "rulingDay": "Wednesday",
+      "mantra": "Om Braam Breem Braum Sah Budhaya Namah",
+      "exaltation": "Virgo (15°)",
+      "debilitation": "Pisces (15°)",
+      "friends": [
+        "Sun",
+        "Venus"
+      ],
+      "enemies": [
+        "Moon"
+      ],
+      "neutral": [
+        "Mars",
+        "Jupiter",
+        "Saturn"
+      ],
+      "description": "Mercury is the prince of the celestial kingdom and the fastest-moving planet in Vedic astrology. It governs intelligence, communication, analytical ability, and commerce. Mercury is unique because it takes on the nature of the planets it associates with — becoming benefic with benefics and malefic with malefics. A strong Mercury bestows excellent oratory skills, mathematical ability, business acumen, and wit. When afflicted, Mercury can cause nervous disorders, speech impediments, and difficulties in education or trade.",
+      "significance": "Intelligence, communication, speech, trade, mathematics, skin, nervous system, maternal uncle, friends, education, writing, and adaptability."
+    },
+    {
+      "id": "jupiter",
+      "name": "Jupiter (Guru / Brihaspati)",
+      "symbol": "♃",
+      "nature": "Benefic (greatest benefic)",
+      "gender": "Male",
+      "element": "Ether (Space)",
+      "gemstone": "Yellow Sapphire (Pukhraj)",
+      "metal": "Gold",
+      "color": "Yellow",
+      "rulingDay": "Thursday",
+      "mantra": "Om Graam Greem Graum Sah Gurave Namah",
+      "exaltation": "Cancer (5°)",
+      "debilitation": "Capricorn (5°)",
+      "friends": [
+        "Sun",
+        "Moon",
+        "Mars"
+      ],
+      "enemies": [
+        "Mercury",
+        "Venus"
+      ],
+      "neutral": [
+        "Saturn"
+      ],
+      "description": "Jupiter is the Guru — the great teacher and the most benefic planet in Vedic astrology. Known as the planet of wisdom, expansion, and divine grace, Jupiter governs higher knowledge, philosophy, dharma (righteousness), and children. It is the karaka (significator) of the husband in a female's chart and of wealth and prosperity in general. A strong Jupiter blesses with wisdom, morality, generosity, and good fortune. It expands whatever it touches. An afflicted Jupiter can lead to over-indulgence, false beliefs, liver disorders, and financial extravagance.",
+      "significance": "Wisdom, dharma, children, wealth, guru/teacher, husband (in female charts), liver, fat, higher education, philosophy, religion, law, and long-distance travel."
+    },
+    {
+      "id": "venus",
+      "name": "Venus (Shukra)",
+      "symbol": "♀",
+      "nature": "Benefic",
+      "gender": "Female",
+      "element": "Water",
+      "gemstone": "Diamond (Heera)",
+      "metal": "Silver / Platinum",
+      "color": "White / Multicolor",
+      "rulingDay": "Friday",
+      "mantra": "Om Draam Dreem Draum Sah Shukraya Namah",
+      "exaltation": "Pisces (27°)",
+      "debilitation": "Virgo (27°)",
+      "friends": [
+        "Mercury",
+        "Saturn"
+      ],
+      "enemies": [
+        "Sun",
+        "Moon"
+      ],
+      "neutral": [
+        "Mars",
+        "Jupiter"
+      ],
+      "description": "Venus is the Asura Guru — the teacher of the demons, and the planet of love, beauty, and luxury in Vedic astrology. It governs romance, marriage, artistic expression, sensual pleasures, and material comforts. Venus is the karaka of the wife in a male's chart and signifies the quality of one's relationships and aesthetic sense. A strong Venus grants charm, artistic talent, luxury, harmonious relationships, and financial prosperity. An afflicted Venus may lead to excessive indulgence, relationship troubles, diabetes, or problems related to the reproductive system.",
+      "significance": "Love, marriage, wife (in male charts), beauty, arts, luxury, vehicles, perfumes, jewelry, reproductive system, kidneys, and creative expression."
+    },
+    {
+      "id": "saturn",
+      "name": "Saturn (Shani)",
+      "symbol": "♄",
+      "nature": "Malefic",
+      "gender": "Neutral (Eunuch)",
+      "element": "Air",
+      "gemstone": "Blue Sapphire (Neelam)",
+      "metal": "Iron / Steel",
+      "color": "Black / Dark Blue",
+      "rulingDay": "Saturday",
+      "mantra": "Om Praam Preem Praum Sah Shanaischaraya Namah",
+      "exaltation": "Libra (20°)",
+      "debilitation": "Aries (20°)",
+      "friends": [
+        "Mercury",
+        "Venus"
+      ],
+      "enemies": [
+        "Sun",
+        "Moon",
+        "Mars"
+      ],
+      "neutral": [
+        "Jupiter"
+      ],
+      "description": "Saturn is the great taskmaster, the karmic judge of the zodiac. Often feared, Saturn is actually the planet of discipline, perseverance, and spiritual growth through hardship. It governs longevity, career, democracy, and the working class. Saturn's transit periods — especially Sade Sati (7.5 years) and Dhaiyya — are transformational phases that test one's patience and character. A well-placed Saturn bestows discipline, organizational skills, longevity, and success through sustained effort. An afflicted Saturn brings delays, chronic diseases, depression, and karmic lessons.",
+      "significance": "Karma, discipline, longevity, delays, service, labor, democracy, old age, chronic illness, legs, teeth, iron, oil, agriculture, and spiritual growth through suffering."
+    },
+    {
+      "id": "rahu",
+      "name": "Rahu (North Node)",
+      "symbol": "☊",
+      "nature": "Malefic (shadow planet)",
+      "gender": "Male",
+      "element": "Air",
+      "gemstone": "Hessonite Garnet (Gomed)",
+      "metal": "Lead / Mixed Metals",
+      "color": "Smoke / Dark Blue",
+      "rulingDay": "Saturday (shared with Saturn)",
+      "mantra": "Om Bhraam Bhreem Bhraum Sah Rahave Namah",
+      "exaltation": "Taurus / Gemini",
+      "debilitation": "Scorpio / Sagittarius",
+      "friends": [
+        "Venus",
+        "Saturn"
+      ],
+      "enemies": [
+        "Sun",
+        "Moon",
+        "Mars"
+      ],
+      "neutral": [
+        "Mercury",
+        "Jupiter"
+      ],
+      "description": "Rahu is the North Node of the Moon — a shadow planet (Chhaya Graha) with no physical body. It represents our unfulfilled desires from past lives, obsessions, and the drive for worldly achievement. Rahu amplifies and distorts whatever it touches, creating illusion (Maya), unconventional paths, and sudden gains or losses. Rahu governs foreign cultures, technology, research, and breaking societal norms. A well-placed Rahu grants extraordinary worldly success, political power, and mastery over technology. An afflicted Rahu causes addiction, mental confusion, phobias, and involvement in scandals.",
+      "significance": "Worldly desires, obsession, illusion, foreigners, technology, poison, snakes, maternal grandparents, unconventional paths, sudden events, and breaking taboos."
+    },
+    {
+      "id": "ketu",
+      "name": "Ketu (South Node)",
+      "symbol": "☋",
+      "nature": "Malefic (shadow planet)",
+      "gender": "Neutral (Eunuch)",
+      "element": "Fire",
+      "gemstone": "Cat's Eye (Lehsuniya)",
+      "metal": "Mixed Metals",
+      "color": "Grey / Smoky",
+      "rulingDay": "Tuesday (shared with Mars)",
+      "mantra": "Om Sraam Sreem Sraum Sah Ketave Namah",
+      "exaltation": "Scorpio / Sagittarius",
+      "debilitation": "Taurus / Gemini",
+      "friends": [
+        "Mars",
+        "Jupiter"
+      ],
+      "enemies": [
+        "Sun",
+        "Moon"
+      ],
+      "neutral": [
+        "Mercury",
+        "Venus",
+        "Saturn"
+      ],
+      "description": "Ketu is the South Node of the Moon — the headless body of the celestial serpent, representing detachment, spirituality, and past-life mastery. While Rahu pulls us toward worldly desires, Ketu pushes us toward spiritual liberation (Moksha). Ketu governs mysticism, occult sciences, psychic abilities, and sudden enlightenment. A well-placed Ketu grants deep spiritual wisdom, healing abilities, and mastery over ancient knowledge. An afflicted Ketu can cause aimlessness, confusion about purpose, supernatural disturbances, and diseases that are difficult to diagnose.",
+      "significance": "Moksha (liberation), detachment, past karma, occult, spirituality, paternal grandparents, surgery, dogs, flags, intuition, and sudden enlightenment."
+    }
+  ],
+  "houses": [
+    {
+      "id": "1",
+      "name": "1st House — Lagna (Ascendant)",
+      "keywords": [
+        "Self",
+        "Identity",
+        "Appearance",
+        "Beginning"
+      ],
+      "rulingSign": "Aries (natural zodiac)",
+      "bodyParts": [
+        "Head",
+        "Brain",
+        "Face"
+      ],
+      "significations": [
+        "Physical body",
+        "Personality",
+        "Health",
+        "Temperament",
+        "First impression"
+      ],
+      "description": "The 1st house is the foundation of the entire birth chart. It represents your physical body, personality, appearance, and overall approach to life. The Ascendant (Lagna) determines the entire framework of the horoscope — which planets rule which houses and how life events unfold. A strong 1st house lord placed well gives confidence, good health, and a commanding personality. The condition of the 1st house reveals your life's general direction, vitality, and the first impression you make on the world."
+    },
+    {
+      "id": "2",
+      "name": "2nd House — Dhana Bhava",
+      "keywords": [
+        "Wealth",
+        "Family",
+        "Speech",
+        "Food"
+      ],
+      "rulingSign": "Taurus (natural zodiac)",
+      "bodyParts": [
+        "Face",
+        "Mouth",
+        "Right eye",
+        "Throat"
+      ],
+      "significations": [
+        "Accumulated wealth",
+        "Family values",
+        "Early childhood",
+        "Eating habits",
+        "Voice quality"
+      ],
+      "description": "The 2nd house governs wealth, family heritage, speech, and the food you eat. It is a Maraka (death-inflicting) house, meaning its lord can trigger health crises during certain planetary periods. This house reveals your earning capacity, savings habits, and relationship with your birth family. A well-placed 2nd house lord gives sweet speech, financial security, and a good diet. The gems and precious metals you prefer, and even the quality of your voice in singing, are seen from this house."
+    },
+    {
+      "id": "3",
+      "name": "3rd House — Sahaja Bhava",
+      "keywords": [
+        "Courage",
+        "Siblings",
+        "Skills",
+        "Short Travel"
+      ],
+      "rulingSign": "Gemini (natural zodiac)",
+      "bodyParts": [
+        "Arms",
+        "Hands",
+        "Shoulders",
+        "Upper chest"
+      ],
+      "significations": [
+        "Younger siblings",
+        "Valor",
+        "Communication skills",
+        "Writing",
+        "Short journeys",
+        "Hobbies"
+      ],
+      "description": "The 3rd house is the house of courage, effort, and self-expression through skills. It governs your younger siblings, neighbours, and short-distance travels. This is an Upachaya (growth) house, meaning results improve over time. It shows your hobbies, artistic skills, and media-related abilities. A strong 3rd house gives boldness, good relationships with siblings, and success in pursuits requiring manual dexterity or communication — writing, blogging, podcasting, or performing arts."
+    },
+    {
+      "id": "4",
+      "name": "4th House — Bandhu Bhava",
+      "keywords": [
+        "Home",
+        "Mother",
+        "Peace",
+        "Property"
+      ],
+      "rulingSign": "Cancer (natural zodiac)",
+      "bodyParts": [
+        "Chest",
+        "Lungs",
+        "Heart area"
+      ],
+      "significations": [
+        "Mother",
+        "Domestic happiness",
+        "Real estate",
+        "Vehicles",
+        "Education",
+        "Inner peace"
+      ],
+      "description": "The 4th house is one of the Kendra (angular) houses and represents the foundation of your emotional well-being. It governs your mother, home, landed property, vehicles, and formal education. This house reveals your deepest sense of comfort and psychological security. It is the house of Sukha (happiness) — the inner peace that comes from a stable foundation. A strong 4th house gives a beautiful home, loving mother, academic success, and luxury vehicles. It also governs your connection to your homeland."
+    },
+    {
+      "id": "5",
+      "name": "5th House — Putra Bhava",
+      "keywords": [
+        "Children",
+        "Creativity",
+        "Romance",
+        "Intellect"
+      ],
+      "rulingSign": "Leo (natural zodiac)",
+      "bodyParts": [
+        "Stomach",
+        "Upper abdomen",
+        "Spine"
+      ],
+      "significations": [
+        "Children",
+        "Romantic love",
+        "Creative intelligence",
+        "Speculation",
+        "Past-life merit (Purva Punya)",
+        "Mantras"
+      ],
+      "description": "The 5th house is a Trikona (trine) house, making it one of the most auspicious houses in the chart. It represents your creative intelligence, children, romantic relationships, and spiritual practices (mantra siddhi). This house shows the merit accumulated from past lives (Purva Punya) and your capacity for joy and playfulness. It governs speculation, stock markets, and gambling tendencies. A strong 5th house gives brilliant children, creative genius, success in competitive exams, and a vibrant love life."
+    },
+    {
+      "id": "6",
+      "name": "6th House — Ari Bhava",
+      "keywords": [
+        "Enemies",
+        "Disease",
+        "Service",
+        "Debts"
+      ],
+      "rulingSign": "Virgo (natural zodiac)",
+      "bodyParts": [
+        "Intestines",
+        "Kidneys",
+        "Waist area"
+      ],
+      "significations": [
+        "Enemies",
+        "Diseases",
+        "Daily routine",
+        "Debts",
+        "Legal disputes",
+        "Service",
+        "Pets"
+      ],
+      "description": "The 6th house is a Dusthana (challenging) house but also an Upachaya (growth) house. It governs enemies, diseases, debts, and daily work routines. Paradoxically, a strong 6th house can be very beneficial — it means you can defeat enemies, overcome diseases, and clear debts effectively. This house reveals your approach to service, health management, and handling opposition. Strong malefics here (Mars, Saturn, Rahu) can actually be powerful, giving victory over competitors and success in healing, law, or military careers."
+    },
+    {
+      "id": "7",
+      "name": "7th House — Yuvati Bhava",
+      "keywords": [
+        "Marriage",
+        "Partnership",
+        "Business",
+        "Public"
+      ],
+      "rulingSign": "Libra (natural zodiac)",
+      "bodyParts": [
+        "Lower abdomen",
+        "Kidneys",
+        "Reproductive organs"
+      ],
+      "significations": [
+        "Spouse",
+        "Marriage",
+        "Business partners",
+        "Contracts",
+        "Public dealings",
+        "Foreign residence"
+      ],
+      "description": "The 7th house is a Kendra (angular) house directly opposite the Ascendant. It represents your spouse, marriage, business partnerships, and all one-to-one relationships. This house also governs foreign travel and settlement. Being a Maraka house, the 7th lord's planetary period can bring significant health transformations. A strong 7th house gives a beautiful and supportive spouse, successful business partnerships, and a good public reputation. The nature of planets here strongly colours the quality of your married life."
+    },
+    {
+      "id": "8",
+      "name": "8th House — Randhra Bhava",
+      "keywords": [
+        "Transformation",
+        "Death",
+        "Mystery",
+        "Inheritance"
+      ],
+      "rulingSign": "Scorpio (natural zodiac)",
+      "bodyParts": [
+        "Reproductive organs",
+        "Chronic illness areas"
+      ],
+      "significations": [
+        "Longevity",
+        "Death",
+        "Inheritance",
+        "Hidden knowledge",
+        "Sudden events",
+        "Insurance",
+        "Research"
+      ],
+      "description": "The 8th house is the most mysterious house in Vedic astrology. It governs death, transformation, hidden knowledge, and everything beneath the surface — including occult sciences, tantric practices, and deep psychological patterns. It represents sudden upheavals, inheritance, insurance, and the partner's wealth (being the 2nd from the 7th). Despite being a Dusthana, a strong 8th house gives longevity, research abilities, healing powers, and gains through inheritance. It is the gateway to profound spiritual transformation."
+    },
+    {
+      "id": "9",
+      "name": "9th House — Dharma Bhava",
+      "keywords": [
+        "Fortune",
+        "Guru",
+        "Dharma",
+        "Pilgrimage"
+      ],
+      "rulingSign": "Sagittarius (natural zodiac)",
+      "bodyParts": [
+        "Thighs",
+        "Hips"
+      ],
+      "significations": [
+        "Father",
+        "Guru",
+        "Higher education",
+        "Long-distance travel",
+        "Religion",
+        "Law",
+        "Fortune",
+        "Philosophy"
+      ],
+      "description": "The 9th house is the Bhagya Bhava — the house of fortune and the most powerful Trikona (trine). It represents your dharma (life purpose), father, spiritual teacher (Guru), and the blessings that come from righteous living. This house governs higher education, philosophical wisdom, long-distance travel, pilgrimage, and interactions with foreign cultures. A strong 9th house is considered one of the greatest blessings in a birth chart — it brings luck, wisdom, ethical integrity, and divine grace that supports all endeavours."
+    },
+    {
+      "id": "10",
+      "name": "10th House — Karma Bhava",
+      "keywords": [
+        "Career",
+        "Status",
+        "Authority",
+        "Action"
+      ],
+      "rulingSign": "Capricorn (natural zodiac)",
+      "bodyParts": [
+        "Knees",
+        "Joints",
+        "Spine"
+      ],
+      "significations": [
+        "Profession",
+        "Public status",
+        "Government",
+        "Authority",
+        "Achievement",
+        "Reputation"
+      ],
+      "description": "The 10th house is the highest point of the birth chart and the strongest Kendra (angular) house. It represents your career, public status, professional achievements, and contribution to society. This house governs authority, government connections, and your professional reputation. The 10th house lord's placement reveals the nature of your career and how you achieve success. A strong 10th house gives a powerful career, social recognition, and leadership roles. Planets here are extremely visible and shape your public persona."
+    },
+    {
+      "id": "11",
+      "name": "11th House — Labha Bhava",
+      "keywords": [
+        "Gains",
+        "Friends",
+        "Aspirations",
+        "Income"
+      ],
+      "rulingSign": "Aquarius (natural zodiac)",
+      "bodyParts": [
+        "Ankles",
+        "Calves",
+        "Left ear"
+      ],
+      "significations": [
+        "Gains",
+        "Income",
+        "Elder siblings",
+        "Friends",
+        "Social networks",
+        "Aspirations",
+        "Fulfilment of desires"
+      ],
+      "description": "The 11th house is the house of gains, wishes, and social networks. As an Upachaya (growth) house, its results improve steadily over time. It governs your income (as opposed to wealth, which is the 2nd house), elder siblings, influential friends, and large organizations. The 11th house represents the fulfilment of all your aspirations and desires. A strong 11th house gives abundant income, supportive friends, elder siblings who help, and the ability to achieve one's dreams. It is considered one of the best houses for material success."
+    },
+    {
+      "id": "12",
+      "name": "12th House — Vyaya Bhava",
+      "keywords": [
+        "Liberation",
+        "Losses",
+        "Foreign",
+        "Spirituality"
+      ],
+      "rulingSign": "Pisces (natural zodiac)",
+      "bodyParts": [
+        "Feet",
+        "Left eye",
+        "Sleep disorders"
+      ],
+      "significations": [
+        "Expenses",
+        "Losses",
+        "Foreign lands",
+        "Hospitals",
+        "Prisons",
+        "Moksha",
+        "Dreams",
+        "Bed pleasures"
+      ],
+      "description": "The 12th house is the final house of the zodiac, representing endings, dissolution, and spiritual liberation (Moksha). It governs expenses, losses, foreign residence, isolation, and the subconscious mind. While often feared, the 12th house holds profound spiritual significance — it is where the soul prepares for its next journey. A strong 12th house can give success abroad, spiritual enlightenment, good sleep, and pleasures of the bed. An afflicted 12th house leads to excessive spending, hospitalization, imprisonment, or self-destructive habits."
+    }
+  ],
+  "zodiacs": [
+    {
+      "id": "aries",
+      "name": "Aries (Mesha)",
+      "symbol": "♈",
+      "element": "Fire",
+      "quality": "Cardinal (Chara)",
+      "rulingPlanet": "Mars",
+      "gender": "Male",
+      "luckyNumbers": [
+        1,
+        8,
+        17
+      ],
+      "luckyColors": [
+        "Red",
+        "Scarlet"
+      ],
+      "positiveTraits": [
+        "Courageous",
+        "Energetic",
+        "Pioneering",
+        "Enthusiastic",
+        "Confident"
+      ],
+      "negativeTraits": [
+        "Impulsive",
+        "Impatient",
+        "Short-tempered",
+        "Aggressive"
+      ],
+      "compatibility": [
+        "Leo",
+        "Sagittarius",
+        "Gemini",
+        "Aquarius"
+      ],
+      "description": "Aries is the first sign of the zodiac, symbolizing new beginnings, raw energy, and the warrior spirit. Ruled by Mars, Aries natives are natural leaders who charge head-first into challenges. They possess an infectious enthusiasm and a pioneering mindset that inspires others. In Vedic astrology, Aries is associated with the head and brain, reflecting the sign's tendency to think and act quickly. The challenge for Aries is learning patience and channelling their abundant energy constructively."
+    },
+    {
+      "id": "taurus",
+      "name": "Taurus (Vrishabha)",
+      "symbol": "♉",
+      "element": "Earth",
+      "quality": "Fixed (Sthira)",
+      "rulingPlanet": "Venus",
+      "gender": "Female",
+      "luckyNumbers": [
+        2,
+        6,
+        9
+      ],
+      "luckyColors": [
+        "Green",
+        "Pink",
+        "White"
+      ],
+      "positiveTraits": [
+        "Reliable",
+        "Patient",
+        "Devoted",
+        "Practical",
+        "Sensual"
+      ],
+      "negativeTraits": [
+        "Stubborn",
+        "Possessive",
+        "Materialistic",
+        "Resistant to change"
+      ],
+      "compatibility": [
+        "Virgo",
+        "Capricorn",
+        "Cancer",
+        "Pisces"
+      ],
+      "description": "Taurus is the sign of stability, material abundance, and sensory pleasure. Ruled by Venus, Taurus natives have a deep appreciation for beauty, comfort, and the finer things in life. They are dependable, hardworking, and possess extraordinary patience and persistence. In Vedic astrology, Taurus governs the face, throat, and voice — hence many Taurus natives have melodious voices. The sign represents accumulated wealth (Dhana) and the ability to build lasting foundations through steady, determined effort."
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini (Mithuna)",
+      "symbol": "♊",
+      "element": "Air",
+      "quality": "Mutable (Dwiswabhava)",
+      "rulingPlanet": "Mercury",
+      "gender": "Male",
+      "luckyNumbers": [
+        3,
+        5,
+        6
+      ],
+      "luckyColors": [
+        "Yellow",
+        "Green",
+        "Light Blue"
+      ],
+      "positiveTraits": [
+        "Versatile",
+        "Curious",
+        "Communicative",
+        "Witty",
+        "Intellectual"
+      ],
+      "negativeTraits": [
+        "Inconsistent",
+        "Superficial",
+        "Restless",
+        "Indecisive"
+      ],
+      "compatibility": [
+        "Libra",
+        "Aquarius",
+        "Aries",
+        "Leo"
+      ],
+      "description": "Gemini is the sign of duality, communication, and intellectual curiosity. Ruled by Mercury, Gemini natives are natural communicators who can adapt to any social situation. They possess a quick mind, verbal dexterity, and an insatiable hunger for information. The twins represent the dual nature of this sign — the ability to see both sides of every argument. In Vedic astrology, Gemini governs the arms, hands, and nervous system, reflecting the sign's restless energy and manual dexterity."
+    },
+    {
+      "id": "cancer",
+      "name": "Cancer (Karka)",
+      "symbol": "♋",
+      "element": "Water",
+      "quality": "Cardinal (Chara)",
+      "rulingPlanet": "Moon",
+      "gender": "Female",
+      "luckyNumbers": [
+        2,
+        7,
+        11
+      ],
+      "luckyColors": [
+        "White",
+        "Silver",
+        "Cream"
+      ],
+      "positiveTraits": [
+        "Nurturing",
+        "Intuitive",
+        "Protective",
+        "Loyal",
+        "Empathetic"
+      ],
+      "negativeTraits": [
+        "Moody",
+        "Clingy",
+        "Oversensitive",
+        "Manipulative"
+      ],
+      "compatibility": [
+        "Scorpio",
+        "Pisces",
+        "Taurus",
+        "Virgo"
+      ],
+      "description": "Cancer is the sign of the home, the mother, and emotional depth. Ruled by the Moon, Cancer natives are deeply intuitive, nurturing, and protective of their loved ones. They have a strong connection to their roots, ancestry, and homeland. The crab symbolizes their hard exterior that protects a soft, vulnerable interior. In Vedic astrology, Cancer governs the chest and stomach, reflecting the sign's association with nourishment and emotional digestion. Cancer natives make excellent caregivers, therapists, and homemakers."
+    },
+    {
+      "id": "leo",
+      "name": "Leo (Simha)",
+      "symbol": "♌",
+      "element": "Fire",
+      "quality": "Fixed (Sthira)",
+      "rulingPlanet": "Sun",
+      "gender": "Male",
+      "luckyNumbers": [
+        1,
+        4,
+        10
+      ],
+      "luckyColors": [
+        "Gold",
+        "Orange",
+        "Royal Red"
+      ],
+      "positiveTraits": [
+        "Generous",
+        "Charismatic",
+        "Creative",
+        "Confident",
+        "Loyal"
+      ],
+      "negativeTraits": [
+        "Arrogant",
+        "Dominating",
+        "Attention-seeking",
+        "Inflexible"
+      ],
+      "compatibility": [
+        "Aries",
+        "Sagittarius",
+        "Gemini",
+        "Libra"
+      ],
+      "description": "Leo is the sign of royalty, creativity, and self-expression. Ruled by the Sun, Leo natives radiate confidence, warmth, and a natural magnetism that draws others to them. They are born leaders who thrive in the spotlight and inspire others through their generous spirit. The lion symbolizes courage, nobility, and the protective instinct of this sign. In Vedic astrology, Leo governs the heart and spine, reflecting the sign's connection to vitality, courage, and the centre of one's being."
+    },
+    {
+      "id": "virgo",
+      "name": "Virgo (Kanya)",
+      "symbol": "♍",
+      "element": "Earth",
+      "quality": "Mutable (Dwiswabhava)",
+      "rulingPlanet": "Mercury",
+      "gender": "Female",
+      "luckyNumbers": [
+        5,
+        14,
+        23
+      ],
+      "luckyColors": [
+        "Green",
+        "Brown",
+        "Earthy tones"
+      ],
+      "positiveTraits": [
+        "Analytical",
+        "Meticulous",
+        "Modest",
+        "Diligent",
+        "Health-conscious"
+      ],
+      "negativeTraits": [
+        "Overcritical",
+        "Worrying",
+        "Perfectionist",
+        "Judgemental"
+      ],
+      "compatibility": [
+        "Taurus",
+        "Capricorn",
+        "Cancer",
+        "Scorpio"
+      ],
+      "description": "Virgo is the sign of service, analysis, and purification. Ruled by Mercury, Virgo natives possess a sharp analytical mind, attention to detail, and a genuine desire to improve and serve. The maiden symbolizes purity, discrimination, and the quest for perfection. In Vedic astrology, Virgo governs the intestines and digestive system, reflecting the sign's association with health, diet, and the process of separating the useful from the useless. Virgo natives excel as healers, editors, researchers, and craftspeople."
+    },
+    {
+      "id": "libra",
+      "name": "Libra (Tula)",
+      "symbol": "♎",
+      "element": "Air",
+      "quality": "Cardinal (Chara)",
+      "rulingPlanet": "Venus",
+      "gender": "Male",
+      "luckyNumbers": [
+        6,
+        15,
+        24
+      ],
+      "luckyColors": [
+        "Pastel Blue",
+        "Pink",
+        "White"
+      ],
+      "positiveTraits": [
+        "Diplomatic",
+        "Fair-minded",
+        "Charming",
+        "Artistic",
+        "Social"
+      ],
+      "negativeTraits": [
+        "Indecisive",
+        "Conflict-avoidant",
+        "Superficial",
+        "People-pleasing"
+      ],
+      "compatibility": [
+        "Gemini",
+        "Aquarius",
+        "Leo",
+        "Sagittarius"
+      ],
+      "description": "Libra is the sign of balance, partnerships, and aesthetic beauty. Ruled by Venus, Libra natives are natural diplomats who seek harmony in all relationships. The scales symbolize their innate sense of justice and their constant quest for equilibrium. In Vedic astrology, Libra governs the kidneys and lower back, reflecting the sign's association with balance and partnership. Libra is the sign where Saturn gets exalted, indicating that discipline and fairness reach their highest expression here."
+    },
+    {
+      "id": "scorpio",
+      "name": "Scorpio (Vrishchika)",
+      "symbol": "♏",
+      "element": "Water",
+      "quality": "Fixed (Sthira)",
+      "rulingPlanet": "Mars (and Ketu)",
+      "gender": "Female",
+      "luckyNumbers": [
+        9,
+        18,
+        27
+      ],
+      "luckyColors": [
+        "Deep Red",
+        "Maroon",
+        "Black"
+      ],
+      "positiveTraits": [
+        "Passionate",
+        "Resourceful",
+        "Determined",
+        "Intuitive",
+        "Magnetic"
+      ],
+      "negativeTraits": [
+        "Jealous",
+        "Secretive",
+        "Vengeful",
+        "Obsessive"
+      ],
+      "compatibility": [
+        "Cancer",
+        "Pisces",
+        "Virgo",
+        "Capricorn"
+      ],
+      "description": "Scorpio is the sign of transformation, intensity, and hidden power. Ruled by Mars (and co-ruled by Ketu), Scorpio natives possess extraordinary emotional depth, willpower, and the ability to regenerate from any crisis. The scorpion symbolizes the transformative sting that leads to growth through destruction and rebirth. In Vedic astrology, Scorpio governs the reproductive organs and hidden areas of the body, reflecting the sign's association with creation, destruction, and the mysteries of life and death."
+    },
+    {
+      "id": "sagittarius",
+      "name": "Sagittarius (Dhanu)",
+      "symbol": "♐",
+      "element": "Fire",
+      "quality": "Mutable (Dwiswabhava)",
+      "rulingPlanet": "Jupiter",
+      "gender": "Male",
+      "luckyNumbers": [
+        3,
+        12,
+        21
+      ],
+      "luckyColors": [
+        "Yellow",
+        "Orange",
+        "Purple"
+      ],
+      "positiveTraits": [
+        "Optimistic",
+        "Philosophical",
+        "Adventurous",
+        "Honest",
+        "Generous"
+      ],
+      "negativeTraits": [
+        "Tactless",
+        "Restless",
+        "Overconfident",
+        "Preachy"
+      ],
+      "compatibility": [
+        "Aries",
+        "Leo",
+        "Libra",
+        "Aquarius"
+      ],
+      "description": "Sagittarius is the sign of wisdom, adventure, and higher truth. Ruled by Jupiter, the greatest benefic, Sagittarius natives are eternal seekers — of knowledge, meaning, and new horizons. The archer aiming at the stars symbolizes their aspiration for higher understanding. In Vedic astrology, Sagittarius governs the thighs and hips, reflecting the sign's love of movement, travel, and physical adventure. This is the sign of the Dharma Bhava — religion, law, ethics, and the philosophical quest for truth."
+    },
+    {
+      "id": "capricorn",
+      "name": "Capricorn (Makara)",
+      "symbol": "♑",
+      "element": "Earth",
+      "quality": "Cardinal (Chara)",
+      "rulingPlanet": "Saturn",
+      "gender": "Female",
+      "luckyNumbers": [
+        8,
+        17,
+        26
+      ],
+      "luckyColors": [
+        "Black",
+        "Dark Brown",
+        "Indigo"
+      ],
+      "positiveTraits": [
+        "Ambitious",
+        "Disciplined",
+        "Practical",
+        "Patient",
+        "Responsible"
+      ],
+      "negativeTraits": [
+        "Pessimistic",
+        "Rigid",
+        "Workaholic",
+        "Cold"
+      ],
+      "compatibility": [
+        "Taurus",
+        "Virgo",
+        "Scorpio",
+        "Pisces"
+      ],
+      "description": "Capricorn is the sign of ambition, discipline, and worldly achievement. Ruled by Saturn, Capricorn natives are hardworking, patient, and strategically minded. The sea-goat symbolizes the ability to navigate both material (earth) and spiritual (water) realms. In Vedic astrology, Capricorn governs the knees and skeletal system, reflecting the structural discipline of this sign. Mars gets exalted in Capricorn, meaning that action and ambition reach their peak effectiveness when channelled through Saturnian discipline."
+    },
+    {
+      "id": "aquarius",
+      "name": "Aquarius (Kumbha)",
+      "symbol": "♒",
+      "element": "Air",
+      "quality": "Fixed (Sthira)",
+      "rulingPlanet": "Saturn (and Rahu)",
+      "gender": "Male",
+      "luckyNumbers": [
+        4,
+        13,
+        22
+      ],
+      "luckyColors": [
+        "Electric Blue",
+        "Violet",
+        "Grey"
+      ],
+      "positiveTraits": [
+        "Humanitarian",
+        "Innovative",
+        "Independent",
+        "Intellectual",
+        "Progressive"
+      ],
+      "negativeTraits": [
+        "Detached",
+        "Unpredictable",
+        "Stubborn",
+        "Rebellious"
+      ],
+      "compatibility": [
+        "Gemini",
+        "Libra",
+        "Aries",
+        "Sagittarius"
+      ],
+      "description": "Aquarius is the sign of innovation, humanitarianism, and collective consciousness. Ruled by Saturn (and co-ruled by Rahu), Aquarius natives are visionaries who think beyond conventional boundaries. The water-bearer symbolizes the distribution of knowledge and wisdom to humanity. In Vedic astrology, Aquarius governs the ankles and circulatory system, reflecting the sign's connection to networks and the flow of ideas. Aquarius represents the 11th house in the natural zodiac — the house of gains, social networks, and the fulfilment of aspirations."
+    },
+    {
+      "id": "pisces",
+      "name": "Pisces (Meena)",
+      "symbol": "♓",
+      "element": "Water",
+      "quality": "Mutable (Dwiswabhava)",
+      "rulingPlanet": "Jupiter (and Ketu)",
+      "gender": "Female",
+      "luckyNumbers": [
+        3,
+        7,
+        12
+      ],
+      "luckyColors": [
+        "Sea Green",
+        "Lavender",
+        "White"
+      ],
+      "positiveTraits": [
+        "Compassionate",
+        "Imaginative",
+        "Intuitive",
+        "Selfless",
+        "Spiritual"
+      ],
+      "negativeTraits": [
+        "Escapist",
+        "Overly trusting",
+        "Vague",
+        "Victim mentality"
+      ],
+      "compatibility": [
+        "Cancer",
+        "Scorpio",
+        "Taurus",
+        "Capricorn"
+      ],
+      "description": "Pisces is the final sign of the zodiac, representing spiritual culmination, compassion, and transcendence. Ruled by Jupiter (and co-ruled by Ketu), Pisces natives possess deep empathy, vivid imagination, and an otherworldly quality. The two fish swimming in opposite directions symbolize the eternal tension between the material and spiritual worlds. In Vedic astrology, Pisces governs the feet and the lymphatic system, reflecting the sign's nature of dissolving boundaries. Venus gets exalted here, meaning love reaches its most selfless, universal expression in Pisces."
+    }
+  ],
+  "placements": {
+    "sun": [
+      {
+        "house": 1,
+        "effect": "Strong personality, natural leadership qualities, vitality, and a commanding presence. May bring ego issues if afflicted."
+      },
+      {
+        "house": 2,
+        "effect": "Wealth through government or authority positions. Authoritative speech, but possible friction with family."
+      },
+      {
+        "house": 3,
+        "effect": "Courageous and bold communicator. Good relations with siblings if well-placed. Interest in performing arts."
+      },
+      {
+        "house": 4,
+        "effect": "Desire for prestigious property, strong connection to homeland. May indicate government land or father's property."
+      },
+      {
+        "house": 5,
+        "effect": "Intelligent, creative, and blessed with wise children. Natural inclination toward politics and speculation."
+      },
+      {
+        "house": 6,
+        "effect": "Victory over enemies, strong health, and success in competitive fields. Good placement for government service."
+      },
+      {
+        "house": 7,
+        "effect": "Dominating personality in partnerships. Spouse may be authoritative. Late marriage or ego clashes possible."
+      },
+      {
+        "house": 8,
+        "effect": "Challenges with authority, father's health concerns. Interest in occult but possible low vitality."
+      },
+      {
+        "house": 9,
+        "effect": "Fortunate placement. Strong dharmic inclinations, good relationship with father, success in higher education."
+      },
+      {
+        "house": 10,
+        "effect": "Excellent placement for career success. Government positions, leadership roles, and public recognition."
+      },
+      {
+        "house": 11,
+        "effect": "Gains through government, influential friends, and elder siblings. Fulfillment of aspirations."
+      },
+      {
+        "house": 12,
+        "effect": "Expenditure on self, weak eyesight possible. May travel abroad for government or spiritual purposes."
+      }
+    ],
+    "moon": [
+      {
+        "house": 1,
+        "effect": "Attractive personality, emotional sensitivity, and popularity. Good for public-facing roles."
+      },
+      {
+        "house": 2,
+        "effect": "Sweet speech, love for good food, family-oriented. Financial fluctuations based on Moon's strength."
+      },
+      {
+        "house": 3,
+        "effect": "Creative communication skills, short travels, and good relations with siblings and neighbours."
+      },
+      {
+        "house": 4,
+        "effect": "Deep attachment to home and mother. Beautiful home, luxury vehicles, and emotional contentment."
+      },
+      {
+        "house": 5,
+        "effect": "Romantic, creative mind. Emotional intelligence and deep connection with children."
+      },
+      {
+        "house": 6,
+        "effect": "Emotional challenges, fluctuating health. Service-oriented personality but may worry excessively."
+      },
+      {
+        "house": 7,
+        "effect": "Beautiful and nurturing spouse. Emotionally rich partnerships but possible mood-based conflicts."
+      },
+      {
+        "house": 8,
+        "effect": "Interest in occult and psychology. Emotional turbulence, but intuitive healing abilities."
+      },
+      {
+        "house": 9,
+        "effect": "Spiritual and philosophical mind. Love for travel and connection with foreign cultures."
+      },
+      {
+        "house": 10,
+        "effect": "Public popularity, career involving masses or nurturing. Frequent career changes possible."
+      },
+      {
+        "house": 11,
+        "effect": "Gains through social connections, many friends, and emotional fulfillment of desires."
+      },
+      {
+        "house": 12,
+        "effect": "Vivid dream life, spiritual inclinations. May indicate foreign settlement or love for isolation."
+      }
+    ],
+    "mars": [
+      {
+        "house": 1,
+        "effect": "Strong physique, courageous, and competitive. Manglik dosha from here affects marriage. Athletic ability."
+      },
+      {
+        "house": 2,
+        "effect": "Harsh speech, good earning ability through effort. May cause family disputes or dental issues."
+      },
+      {
+        "house": 3,
+        "effect": "Extremely courageous, strong-willed siblings. Excellent for sports, military, or adventurous pursuits."
+      },
+      {
+        "house": 4,
+        "effect": "Manglik dosha. Multiple properties possible but domestic unrest. Strong land and real estate gains."
+      },
+      {
+        "house": 5,
+        "effect": "Sharp intellect, competitive children. Interest in sports and technical education."
+      },
+      {
+        "house": 6,
+        "effect": "Excellent placement — victory over enemies, strong health, and success in competition and litigation."
+      },
+      {
+        "house": 7,
+        "effect": "Manglik dosha. Passionate but argumentative partnerships. Spouse may be dominating or athletic."
+      },
+      {
+        "house": 8,
+        "effect": "Manglik dosha. Risk of accidents and surgeries. But strong research abilities and longevity."
+      },
+      {
+        "house": 9,
+        "effect": "Active pursuit of dharma, adventurous travels. May have conflicts with father or religious authorities."
+      },
+      {
+        "house": 10,
+        "effect": "Excellent for career achievement. Leadership in military, police, engineering, or surgery."
+      },
+      {
+        "house": 11,
+        "effect": "Gains through courage and enterprise. Influential friends in military or sports circles."
+      },
+      {
+        "house": 12,
+        "effect": "Manglik dosha. Expenditure on land or siblings. May work in hospitals, prisons, or foreign lands."
+      }
+    ],
+    "mercury": [
+      {
+        "house": 1,
+        "effect": "Intelligent, youthful appearance, and excellent communication skills. Analytical and adaptable personality."
+      },
+      {
+        "house": 2,
+        "effect": "Sweet and persuasive speech. Wealth through business, trade, or writing. Good family life."
+      },
+      {
+        "house": 3,
+        "effect": "Brilliant communicator, excellent writer, and skilled with hands. Success in media and publishing."
+      },
+      {
+        "house": 4,
+        "effect": "Education-oriented, intellectual home environment. Success in real estate business or academic pursuits."
+      },
+      {
+        "house": 5,
+        "effect": "Highly intelligent, good in speculation and mathematics. Children may be intellectually gifted."
+      },
+      {
+        "house": 6,
+        "effect": "Analytical approach to problems. Good for medical fields, accounting, and legal disputes."
+      },
+      {
+        "house": 7,
+        "effect": "Business-minded partnerships. Spouse is communicative and youthful. Success in trade."
+      },
+      {
+        "house": 8,
+        "effect": "Interest in research, occult sciences, and investigation. Insurance and tax-related gains."
+      },
+      {
+        "house": 9,
+        "effect": "Philosophical and well-read. Success in higher education, publishing, and law."
+      },
+      {
+        "house": 10,
+        "effect": "Career in communication, IT, accounting, or trade. Versatile professional who can juggle multiple roles."
+      },
+      {
+        "house": 11,
+        "effect": "Gains through intellectual networks, writing, and business. Many friends from diverse backgrounds."
+      },
+      {
+        "house": 12,
+        "effect": "Imaginative mind, interest in foreign languages. May work in behind-the-scenes roles like research or writing."
+      }
+    ],
+    "jupiter": [
+      {
+        "house": 1,
+        "effect": "Wise, generous, and optimistic personality. Good health and natural teaching ability. Respected figure."
+      },
+      {
+        "house": 2,
+        "effect": "Wealthy family background, sweet and wise speech. Gains from education, banking, or counselling."
+      },
+      {
+        "house": 3,
+        "effect": "Courageous in righteous causes. Mentoring younger siblings. Interest in publishing and media."
+      },
+      {
+        "house": 4,
+        "effect": "Happy home, educated mother, beautiful property. Success in education and strong moral values."
+      },
+      {
+        "house": 5,
+        "effect": "Highly auspicious — wise children, creative genius, spiritual practices, and romantic happiness."
+      },
+      {
+        "house": 6,
+        "effect": "Victory over enemies through wisdom. Good for legal and medical careers. May gain weight."
+      },
+      {
+        "house": 7,
+        "effect": "Wise and supportive spouse. Successful partnerships and a happy marriage."
+      },
+      {
+        "house": 8,
+        "effect": "Longevity, gains from inheritance, and interest in deep spiritual study. Protection during crises."
+      },
+      {
+        "house": 9,
+        "effect": "Most auspicious placement — highest fortune, dharmic life, wise father, and spiritual guru."
+      },
+      {
+        "house": 10,
+        "effect": "Prestigious career in education, law, religion, or banking. High social status and respect."
+      },
+      {
+        "house": 11,
+        "effect": "Abundant gains, influential and wealthy friends. Elder siblings prosper. All desires fulfilled."
+      },
+      {
+        "house": 12,
+        "effect": "Spiritual liberation, charitable nature. Success in foreign lands, especially in education or healing."
+      }
+    ],
+    "venus": [
+      {
+        "house": 1,
+        "effect": "Charming personality, attractive appearance, and a natural inclination towards art and beauty. Magnetic social presence."
+      },
+      {
+        "house": 2,
+        "effect": "Sweet speech, wealth through artistic pursuits, and a love for luxury and fine dining. Harmonious family life."
+      },
+      {
+        "house": 3,
+        "effect": "Harmonious relations with siblings and artistic talent in writing, music, or manual skills. Enjoys short journeys."
+      },
+      {
+        "house": 4,
+        "effect": "A beautiful home, happiness through mother, luxury vehicles, and a peaceful domestic environment."
+      },
+      {
+        "house": 5,
+        "effect": "Success in romance, creative intelligence, and children who may have artistic talents. Love for speculation."
+      },
+      {
+        "house": 6,
+        "effect": "Challenges in relationships or health issues related to kidneys/reproduction. Service through beauty or healing arts."
+      },
+      {
+        "house": 7,
+        "effect": "Beautiful and loving spouse, balanced partnerships, and public popularity. Success in business with women or luxury goods."
+      },
+      {
+        "house": 8,
+        "effect": "Interest in occult sciences and gains through inheritance or partner's wealth. Secret romances possible."
+      },
+      {
+        "house": 9,
+        "effect": "Interest in art-infused spirituality, long-distance travels for pleasure, and a philosophical mindset."
+      },
+      {
+        "house": 10,
+        "effect": "Career in arts, luxury, fashion, hospitality, or entertainment. Charm aids professional advancement greatly."
+      },
+      {
+        "house": 11,
+        "effect": "Gains through social circles, large networks of friends, and fulfilment of desires. Income through creativity."
+      },
+      {
+        "house": 12,
+        "effect": "High spiritual inclinations or excessive expenditure on luxury. Love for isolation, foreign lands, and meditation."
+      }
+    ],
+    "saturn": [
+      {
+        "house": 1,
+        "effect": "Serious, disciplined personality. Delayed success but long-lasting results. Thin body type, mature appearance."
+      },
+      {
+        "house": 2,
+        "effect": "Frugal with money, harsh speech possible. Wealth comes slowly but is accumulated carefully through hard work."
+      },
+      {
+        "house": 3,
+        "effect": "Courageous and persistent. Challenging relations with younger siblings. Success through sustained effort in communication fields."
+      },
+      {
+        "house": 4,
+        "effect": "Delayed domestic happiness. May live away from homeland. Property gains later in life."
+      },
+      {
+        "house": 5,
+        "effect": "Delayed children or fewer children. Serious approach to education. Traditional creative expression."
+      },
+      {
+        "house": 6,
+        "effect": "Excellent placement — victory over enemies, strong health (despite fears), and success in service roles."
+      },
+      {
+        "house": 7,
+        "effect": "Delayed marriage, older or mature spouse. Committed partnerships but may feel restrictive."
+      },
+      {
+        "house": 8,
+        "effect": "Long life but chronic health issues. Interest in ancient knowledge. Gains through inheritance or insurance."
+      },
+      {
+        "house": 9,
+        "effect": "Traditional spiritual path. Disciplined father. Success in law, administration, or structured education."
+      },
+      {
+        "house": 10,
+        "effect": "Excellent for career — slow but steady rise to authority. Government, administration, or corporate leadership."
+      },
+      {
+        "house": 11,
+        "effect": "Gains through perseverance. Older, wise friends and elder siblings. Long-term financial stability."
+      },
+      {
+        "house": 12,
+        "effect": "Spiritual growth through isolation. Expenditure on duties. May live in foreign lands or institutions."
+      }
+    ],
+    "rahu": [
+      {
+        "house": 1,
+        "effect": "Unconventional personality, intense focus on self-projection, and a drive for individual identity. Magnetic but mysterious aura."
+      },
+      {
+        "house": 2,
+        "effect": "Obsession with wealth accumulation, unconventional family dynamics, and unique speech patterns. Foreign food preferences."
+      },
+      {
+        "house": 3,
+        "effect": "Intense courage, unconventional skills, and a revolutionary way of communicating. Success in media and technology."
+      },
+      {
+        "house": 4,
+        "effect": "Unconventional home life, intense emotional drive, and focus on luxury property. May live in foreign lands."
+      },
+      {
+        "house": 5,
+        "effect": "Innovations in creative fields, unconventional approach to romance and children. Success in speculation and technology."
+      },
+      {
+        "house": 6,
+        "effect": "Excellent placement — success in handling competitors, alternative healing, and overcoming chronic conditions."
+      },
+      {
+        "house": 7,
+        "effect": "Unconventional partnerships, attraction to foreign partners, and unique social dynamics. Multiple relationships possible."
+      },
+      {
+        "house": 8,
+        "effect": "Deep interest in mysticism, sudden transformations, and unconventional gains. Research and occult abilities."
+      },
+      {
+        "house": 9,
+        "effect": "Unconventional beliefs, interest in foreign philosophies, and radical spiritual paths. Foreign guru possible."
+      },
+      {
+        "house": 10,
+        "effect": "Ambitious career drive, success in unconventional industries, and high public visibility. Politics and technology."
+      },
+      {
+        "house": 11,
+        "effect": "Gains through innovative networks and unconventional friendships. High aspirations fulfilled through unique means."
+      },
+      {
+        "house": 12,
+        "effect": "Intense imaginative power, interest in foreign lands, and spiritual unconventionality. Dreams are vivid and prophetic."
+      }
+    ],
+    "ketu": [
+      {
+        "house": 1,
+        "effect": "Detachment from self-image, spiritual focus, and an introspective personality. Psychic sensitivity and healing abilities."
+      },
+      {
+        "house": 2,
+        "effect": "Detachment from family wealth, spiritual speech, and unconventional eating habits. Past-life knowledge of scripture."
+      },
+      {
+        "house": 3,
+        "effect": "Quiet courage, detachment from siblings, and intuitive communication. Natural skill in ancient arts."
+      },
+      {
+        "house": 4,
+        "effect": "Detachment from home life, spiritual peace within, and unique living situations. Interest in ashrams."
+      },
+      {
+        "house": 5,
+        "effect": "Intuitive intelligence, detachment from speculation, and spiritual connection with children. Past-life mantric abilities."
+      },
+      {
+        "house": 6,
+        "effect": "Spiritual approach to health and enemies. Detachment from daily conflicts. Healing through alternative methods."
+      },
+      {
+        "house": 7,
+        "effect": "Detachment in partnerships, spiritual connection with spouse, unconventional social life. Past-life karmic relationships."
+      },
+      {
+        "house": 8,
+        "effect": "Deep psychic abilities, intuitive understanding of death and rebirth, and spiritual inheritance. Natural mystic."
+      },
+      {
+        "house": 9,
+        "effect": "Spiritual wisdom without formal education, detachment from tradition, and intuitive dharma. Past-life guru connection."
+      },
+      {
+        "house": 10,
+        "effect": "Detachment from professional status, service-oriented career without ego-focus. Success in spiritual or healing professions."
+      },
+      {
+        "house": 11,
+        "effect": "Detachment from social gains and networks. Focus on spiritual fulfilment over material ones. Past-life friendships."
+      },
+      {
+        "house": 12,
+        "effect": "Most spiritual placement — strong intuition, spiritual liberation, and peace in isolation. Moksha karaka potential."
+      }
+    ]
+  },
+  "nakshatras": [
+    {
+      "id": "ashwini",
+      "name": "Ashwini",
+      "number": 1,
+      "rulingPlanet": "Ketu",
+      "deity": "Ashwini Kumaras (Divine Physicians)",
+      "zodiacSpan": "0°00' – 13°20' Aries",
+      "symbol": "Horse's Head",
+      "animalSymbol": "Male Horse",
+      "gana": "Deva (Divine)",
+      "quality": "Kshipra (Swift / Light)",
+      "element": "Earth",
+      "positiveTraits": [
+        "Quick healer",
+        "Adventurous",
+        "Pioneering",
+        "Energetic",
+        "Helpful"
+      ],
+      "negativeTraits": [
+        "Impulsive",
+        "Stubborn",
+        "Aggressive when provoked"
+      ],
+      "description": "Ashwini is the first nakshatra, symbolizing new beginnings, healing, and swift action. Named after the Ashwini Kumaras — the celestial physicians of the gods — this nakshatra grants its natives the power of healing (both physical and spiritual), speed, and an innate desire to help others. People born under Ashwini are natural healers, first responders, and pioneers who initiate new ventures with remarkable speed and enthusiasm."
+    },
+    {
+      "id": "bharani",
+      "name": "Bharani",
+      "number": 2,
+      "rulingPlanet": "Venus",
+      "deity": "Yama (God of Death & Dharma)",
+      "zodiacSpan": "13°20' – 26°40' Aries",
+      "symbol": "Yoni (Female Reproductive Organ)",
+      "animalSymbol": "Male Elephant",
+      "gana": "Manushya (Human)",
+      "quality": "Ugra (Fierce / Severe)",
+      "element": "Earth",
+      "positiveTraits": [
+        "Creative",
+        "Nurturing",
+        "Responsible",
+        "Artistic",
+        "Passionate"
+      ],
+      "negativeTraits": [
+        "Jealous",
+        "Possessive",
+        "Overburdened",
+        "Morally rigid"
+      ],
+      "description": "Bharani is the nakshatra of creation, transformation, and bearing the weight of life's responsibilities. Ruled by Yama, the god of death and dharma, and Venus, the planet of love and beauty, Bharani represents the intense duality of creation and destruction. It is associated with fertility, artistic expression, and the capacity to nurture new life — whether literally or through creative projects and enterprises."
+    },
+    {
+      "id": "krittika",
+      "name": "Krittika",
+      "number": 3,
+      "rulingPlanet": "Sun",
+      "deity": "Agni (God of Fire)",
+      "zodiacSpan": "26°40' Aries – 10°00' Taurus",
+      "symbol": "Razor / Flame",
+      "animalSymbol": "Female Sheep",
+      "gana": "Rakshasa (Demonic)",
+      "quality": "Mishra (Mixed / Sharp)",
+      "element": "Earth",
+      "positiveTraits": [
+        "Determined",
+        "Purifying",
+        "Truthful",
+        "Protective",
+        "Sharp intellect"
+      ],
+      "negativeTraits": [
+        "Critical",
+        "Harsh",
+        "Stubborn",
+        "Aggressive"
+      ],
+      "description": "Krittika is the nakshatra of purification, cutting through illusion, and burning away impurities. Ruled by the Sun and presided over by Agni (Fire), this nakshatra gives its natives a sharp, penetrating intellect and the courage to stand for truth. The six Krittika stars (Pleiades) are considered the foster mothers of Lord Kartikeya (Murugan), the commander of the divine army, giving this nakshatra a protective and nurturing quality alongside its fierce exterior."
+    },
+    {
+      "id": "rohini",
+      "name": "Rohini",
+      "number": 4,
+      "rulingPlanet": "Moon",
+      "deity": "Brahma (Creator God)",
+      "zodiacSpan": "10°00' – 23°20' Taurus",
+      "symbol": "Ox Cart / Chariot",
+      "animalSymbol": "Male Serpent",
+      "gana": "Manushya (Human)",
+      "quality": "Dhruva (Fixed / Steady)",
+      "element": "Earth",
+      "positiveTraits": [
+        "Beautiful",
+        "Creative",
+        "Charming",
+        "Magnetic",
+        "Grounded"
+      ],
+      "negativeTraits": [
+        "Materialistic",
+        "Possessive",
+        "Jealous",
+        "Indulgent"
+      ],
+      "description": "Rohini is considered the most fertile and beautiful nakshatra. As the Moon's most favourite wife (according to mythology), Rohini bestows extraordinary charm, beauty, and creative talent. Ruled by Brahma, the creator, this nakshatra is associated with growth, agriculture, and material abundance. Rohini natives have magnetic personalities, a love for luxury, and exceptional artistic sensibilities. It is the Moon's exaltation nakshatra."
+    },
+    {
+      "id": "mrigashira",
+      "name": "Mrigashira",
+      "number": 5,
+      "rulingPlanet": "Mars",
+      "deity": "Soma (Moon God / Nectar)",
+      "zodiacSpan": "23°20' Taurus – 6°40' Gemini",
+      "symbol": "Deer's Head",
+      "animalSymbol": "Female Serpent",
+      "gana": "Deva (Divine)",
+      "quality": "Mridu (Soft / Gentle)",
+      "element": "Earth",
+      "positiveTraits": [
+        "Curious",
+        "Gentle",
+        "Perceptive",
+        "Romantic",
+        "Seeking"
+      ],
+      "negativeTraits": [
+        "Restless",
+        "Suspicious",
+        "Fickle",
+        "Never satisfied"
+      ],
+      "description": "Mrigashira is the nakshatra of searching, seeking, and the eternal quest for truth and beauty. The deer's head symbol represents the gentle, alert, and constantly moving nature of this nakshatra. Ruled by Mars but presided by Soma (the Moon deity associated with divine nectar), Mrigashira combines martial energy with romantic sensitivity. Natives are eternal seekers — always exploring new territories, whether intellectual, geographical, or spiritual."
+    },
+    {
+      "id": "ardra",
+      "name": "Ardra",
+      "number": 6,
+      "rulingPlanet": "Rahu",
+      "deity": "Rudra (Storm God / Shiva)",
+      "zodiacSpan": "6°40' – 20°00' Gemini",
+      "symbol": "Teardrop / Diamond",
+      "animalSymbol": "Female Dog",
+      "gana": "Manushya (Human)",
+      "quality": "Tikshna (Sharp / Dreadful)",
+      "element": "Water",
+      "positiveTraits": [
+        "Intellectual",
+        "Compassionate after suffering",
+        "Transformative",
+        "Research-oriented"
+      ],
+      "negativeTraits": [
+        "Destructive",
+        "Arrogant",
+        "Storm-prone emotions",
+        "Ungrateful"
+      ],
+      "description": "Ardra is the nakshatra of storms, tears, and transformation through destruction. Presided by Rudra (the fierce form of Shiva) and ruled by Rahu, Ardra represents the necessary destruction that precedes renewal — like a thunderstorm that clears the air. The teardrop symbol signifies both sorrow and the purification that comes through emotional catharsis. Ardra natives often experience significant transformative events that reshape their lives and give them profound depth and compassion."
+    },
+    {
+      "id": "punarvasu",
+      "name": "Punarvasu",
+      "number": 7,
+      "rulingPlanet": "Jupiter",
+      "deity": "Aditi (Mother of the Gods)",
+      "zodiacSpan": "20°00' Gemini – 3°20' Cancer",
+      "symbol": "Bow and Quiver of Arrows",
+      "animalSymbol": "Female Cat",
+      "gana": "Deva (Divine)",
+      "quality": "Chara (Movable / Temporary)",
+      "element": "Water",
+      "positiveTraits": [
+        "Optimistic",
+        "Generous",
+        "Philosophical",
+        "Resilient",
+        "Returning to goodness"
+      ],
+      "negativeTraits": [
+        "Indecisive",
+        "Simplistic",
+        "Over-generous",
+        "Unstable"
+      ],
+      "description": "Punarvasu means 'return of the light' or 'renewal of prosperity,' representing the cyclical nature of fortune and the ability to bounce back from setbacks. Presided by Aditi, the boundless mother of all gods, this nakshatra bestows a nurturing, expansive, and optimistic nature. With Jupiter as its ruler, Punarvasu natives are philosophical, generous, and possess an innate faith that everything will work out. They are the natural optimists of the zodiac."
+    },
+    {
+      "id": "pushya",
+      "name": "Pushya",
+      "number": 8,
+      "rulingPlanet": "Saturn",
+      "deity": "Brihaspati (Jupiter / Guru of the Gods)",
+      "zodiacSpan": "3°20' – 16°40' Cancer",
+      "symbol": "Cow's Udder / Lotus / Arrow",
+      "animalSymbol": "Male Sheep",
+      "gana": "Deva (Divine)",
+      "quality": "Kshipra (Swift / Light)",
+      "element": "Water",
+      "positiveTraits": [
+        "Nourishing",
+        "Spiritual",
+        "Wise",
+        "Selfless",
+        "Charitable"
+      ],
+      "negativeTraits": [
+        "Over-protective",
+        "Dogmatic",
+        "Helpless without structure",
+        "Rigid"
+      ],
+      "description": "Pushya is widely considered the most auspicious nakshatra in Vedic astrology. Its name means 'to nourish' and it represents the highest form of nurturing and spiritual sustenance. Despite being ruled by Saturn (discipline), its deity is Brihaspati (Jupiter/Guru), creating a beautiful blend of structured wisdom and expansive grace. Pushya natives are natural counsellors, teachers, and spiritual guides who nourish everyone around them."
+    },
+    {
+      "id": "ashlesha",
+      "name": "Ashlesha",
+      "number": 9,
+      "rulingPlanet": "Mercury",
+      "deity": "Naga (Serpent God)",
+      "zodiacSpan": "16°40' – 30°00' Cancer",
+      "symbol": "Coiled Serpent",
+      "animalSymbol": "Male Cat",
+      "gana": "Rakshasa (Demonic)",
+      "quality": "Tikshna (Sharp / Dreadful)",
+      "element": "Water",
+      "positiveTraits": [
+        "Mystical",
+        "Hypnotic",
+        "Penetrating wisdom",
+        "Kundalini power",
+        "Strategic"
+      ],
+      "negativeTraits": [
+        "Deceptive",
+        "Manipulative",
+        "Cold",
+        "Venomous when threatened"
+      ],
+      "description": "Ashlesha is the nakshatra of the serpent — representing kundalini energy, occult knowledge, and the power of entanglement. Presided by the Nagas (serpent deities), Ashlesha bestows deep mystical wisdom, hypnotic charm, and the ability to penetrate hidden truths. However, like the serpent, it can also represent deception, poison, and the darker aspects of power. Ashlesha natives are often drawn to occult sciences, psychology, and fields requiring sharp analytical ability."
+    },
+    {
+      "id": "magha",
+      "name": "Magha",
+      "number": 10,
+      "rulingPlanet": "Ketu",
+      "deity": "Pitris (Ancestral Spirits)",
+      "zodiacSpan": "0°00' – 13°20' Leo",
+      "symbol": "Royal Throne / Palanquin",
+      "animalSymbol": "Male Rat",
+      "gana": "Rakshasa (Demonic)",
+      "quality": "Ugra (Fierce / Severe)",
+      "element": "Water",
+      "positiveTraits": [
+        "Regal",
+        "Authoritative",
+        "Respectful of tradition",
+        "Generous",
+        "Leadership"
+      ],
+      "negativeTraits": [
+        "Arrogant",
+        "Elitist",
+        "Stuck in the past",
+        "Dominating"
+      ],
+      "description": "Magha is the nakshatra of royalty, ancestral heritage, and kingly authority. Presided by the Pitris (ancestral spirits) and ruled by Ketu (past-life karma), Magha connects natives to their lineage, traditions, and ancestral power. Sitting at the beginning of Leo (the royal sign), Magha people carry themselves with dignity & authority. They are natural leaders who honour traditions and expect respect. The throne symbol represents their natural position of authority."
+    },
+    {
+      "id": "purva_phalguni",
+      "name": "Purva Phalguni",
+      "number": 11,
+      "rulingPlanet": "Venus",
+      "deity": "Bhaga (God of Marital Bliss & Prosperity)",
+      "zodiacSpan": "13°20' – 26°40' Leo",
+      "symbol": "Front Legs of a Bed / Hammock",
+      "animalSymbol": "Female Rat",
+      "gana": "Manushya (Human)",
+      "quality": "Ugra (Fierce / Severe)",
+      "element": "Water",
+      "positiveTraits": [
+        "Charming",
+        "Artistic",
+        "Romantic",
+        "Generous",
+        "Relaxed"
+      ],
+      "negativeTraits": [
+        "Lazy",
+        "Indulgent",
+        "Vain",
+        "Promiscuous"
+      ],
+      "description": "Purva Phalguni is the nakshatra of pleasure, romance, and creative enjoyment. The front legs of a bed symbolize rest, relaxation, and conjugal bliss. Presided by Bhaga (the god who distributes wealth and marital happiness) and ruled by Venus, this nakshatra bestows artistic talent, physical beauty, and a magnetic social presence. Purva Phalguni natives are born entertainers who bring joy and celebration wherever they go."
+    },
+    {
+      "id": "uttara_phalguni",
+      "name": "Uttara Phalguni",
+      "number": 12,
+      "rulingPlanet": "Sun",
+      "deity": "Aryaman (God of Patronage & Contracts)",
+      "zodiacSpan": "26°40' Leo – 10°00' Virgo",
+      "symbol": "Back Legs of a Bed",
+      "animalSymbol": "Male Cow (Bull)",
+      "gana": "Manushya (Human)",
+      "quality": "Dhruva (Fixed / Steady)",
+      "element": "Fire",
+      "positiveTraits": [
+        "Reliable",
+        "Generous",
+        "Leadership through service",
+        "Kind",
+        "Socially responsible"
+      ],
+      "negativeTraits": [
+        "Stubborn",
+        "Patronizing",
+        "Over-serious",
+        "Controlling"
+      ],
+      "description": "Uttara Phalguni continues the theme of its predecessor but shifts from pleasure to responsibility. The back legs of the bed represent the support and stability that comes after enjoyment. Presided by Aryaman (the god of contracts, honour, and social codes) and ruled by the Sun, this nakshatra bestows leadership through service, reliability in partnerships, and a strong sense of duty. Uttara Phalguni natives are excellent managers, counsellors, and mediators."
+    },
+    {
+      "id": "hasta",
+      "name": "Hasta",
+      "number": 13,
+      "rulingPlanet": "Moon",
+      "deity": "Savitar (Sun God of Creative Power)",
+      "zodiacSpan": "10°00' – 23°20' Virgo",
+      "symbol": "Open Hand / Fist",
+      "animalSymbol": "Female Buffalo",
+      "gana": "Deva (Divine)",
+      "quality": "Kshipra (Swift / Light)",
+      "element": "Fire",
+      "positiveTraits": [
+        "Skillful",
+        "Crafty",
+        "Humorous",
+        "Healing hands",
+        "Industrious"
+      ],
+      "negativeTraits": [
+        "Cunning",
+        "Thieving tendencies",
+        "Restless minds",
+        "Cold-hearted when hurt"
+      ],
+      "description": "Hasta is the nakshatra of the hands — representing skill, craft, dexterity, and the ability to manifest through manual action. Presided by Savitar (the creative aspect of the Sun god) and ruled by the Moon, Hasta bestows extraordinary manual skills, healing touch, and the ability to grasp and hold onto things — both literally and figuratively. Hasta natives excel in any field requiring hand skills: surgery, art, crafts, magic, or massage therapy."
+    },
+    {
+      "id": "chitra",
+      "name": "Chitra",
+      "number": 14,
+      "rulingPlanet": "Mars",
+      "deity": "Vishwakarma (Celestial Architect)",
+      "zodiacSpan": "23°20' Virgo – 6°40' Libra",
+      "symbol": "Bright Jewel / Pearl",
+      "animalSymbol": "Female Tiger",
+      "gana": "Rakshasa (Demonic)",
+      "quality": "Mridu (Soft / Gentle)",
+      "element": "Fire",
+      "positiveTraits": [
+        "Beautiful",
+        "Creative",
+        "Charismatic",
+        "Architectural genius",
+        "Artistic"
+      ],
+      "negativeTraits": [
+        "Superficial",
+        "Self-centred",
+        "Deceptive appearances",
+        "Corrupt"
+      ],
+      "description": "Chitra is the nakshatra of beauty, brilliance, and architectural mastery. Named after a bright, jewel-like star (Spica), Chitra represents everything that dazzles and captivates. Presided by Vishwakarma (the divine architect who built the palaces of the gods) and ruled by Mars, this nakshatra gives the unique ability to create beautiful structures — be it buildings, artworks, or carefully crafted personas. Chitra natives are visually striking and have impeccable aesthetic sense."
+    },
+    {
+      "id": "swati",
+      "name": "Swati",
+      "number": 15,
+      "rulingPlanet": "Rahu",
+      "deity": "Vayu (God of Wind)",
+      "zodiacSpan": "6°40' – 20°00' Libra",
+      "symbol": "Coral / Young Plant Blown by Wind",
+      "animalSymbol": "Male Buffalo",
+      "gana": "Deva (Divine)",
+      "quality": "Chara (Movable / Temporary)",
+      "element": "Fire",
+      "positiveTraits": [
+        "Independent",
+        "Diplomatic",
+        "Flexible",
+        "Business-minded",
+        "Self-reliant"
+      ],
+      "negativeTraits": [
+        "Restless",
+        "Scattered",
+        "Hidden nature",
+        "Lonely"
+      ],
+      "description": "Swati is the nakshatra of independence, self-sustenance, and the ability to adapt to any environment. The young plant swaying in the wind symbolizes flexibility without breaking — the core quality of Swati. Presided by Vayu (the wind god) and ruled by Rahu, this nakshatra bestows a fierce independence, diplomatic skill, and the ability to thrive in foreign environments. Swati natives are natural entrepreneurs and diplomats who value freedom above all else."
+    },
+    {
+      "id": "vishakha",
+      "name": "Vishakha",
+      "number": 16,
+      "rulingPlanet": "Jupiter",
+      "deity": "Indra & Agni (King of Gods & Fire God)",
+      "zodiacSpan": "20°00' Libra – 3°20' Scorpio",
+      "symbol": "Triumphal Arch / Potter's Wheel",
+      "animalSymbol": "Male Tiger",
+      "gana": "Rakshasa (Demonic)",
+      "quality": "Mishra (Mixed / Sharp)",
+      "element": "Fire",
+      "positiveTraits": [
+        "Goal-oriented",
+        "Determined",
+        "Powerful speaker",
+        "Courageous",
+        "Focused"
+      ],
+      "negativeTraits": [
+        "Jealous",
+        "Obsessive",
+        "Aggressive",
+        "Power-hungry"
+      ],
+      "description": "Vishakha is the nakshatra of single-pointed determination, triumph, and the unwavering pursuit of goals. The triumphal arch symbolizes victory after a long and difficult battle. Presided by both Indra (king of the gods) and Agni (fire), and ruled by Jupiter, Vishakha combines ambition with righteousness. Natives are extraordinarily focused on their goals and will not rest until they achieve them — making them extremely successful but sometimes ruthless in their pursuit."
+    },
+    {
+      "id": "anuradha",
+      "name": "Anuradha",
+      "number": 17,
+      "rulingPlanet": "Saturn",
+      "deity": "Mitra (God of Friendship & Partnership)",
+      "zodiacSpan": "3°20' – 16°40' Scorpio",
+      "symbol": "Lotus / Triumphal Archway",
+      "animalSymbol": "Female Deer (Hare)",
+      "gana": "Deva (Divine)",
+      "quality": "Mridu (Soft / Gentle)",
+      "element": "Fire",
+      "positiveTraits": [
+        "Devoted",
+        "Friendly",
+        "Successful abroad",
+        "Spiritual",
+        "Cooperative"
+      ],
+      "negativeTraits": [
+        "Jealous",
+        "Secretive",
+        "Controlling",
+        "Melancholic"
+      ],
+      "description": "Anuradha means 'following Radha' or 'subsequent success,' representing devotion, friendship, and success through cooperative efforts. The lotus blooming in muddy water symbolizes the ability to thrive in difficult circumstances. Presided by Mitra (the god of friendship and divine partnerships) and ruled by Saturn, Anuradha bestows deep loyalty, the ability to organize and lead groups, and remarkable success in foreign lands."
+    },
+    {
+      "id": "jyeshtha",
+      "name": "Jyeshtha",
+      "number": 18,
+      "rulingPlanet": "Mercury",
+      "deity": "Indra (King of the Gods)",
+      "zodiacSpan": "16°40' – 30°00' Scorpio",
+      "symbol": "Circular Amulet / Earring / Umbrella",
+      "animalSymbol": "Male Deer (Hare)",
+      "gana": "Rakshasa (Demonic)",
+      "quality": "Tikshna (Sharp / Dreadful)",
+      "element": "Air",
+      "positiveTraits": [
+        "Protective",
+        "Courageous",
+        "Resourceful",
+        "Experienced",
+        "Authoritative"
+      ],
+      "negativeTraits": [
+        "Controlling",
+        "Jealous of others' success",
+        "Hypocritical",
+        "Vindictive"
+      ],
+      "description": "Jyeshtha means 'the eldest' or 'the chief,' representing seniority, protection, and the weight of responsibility. Presided by Indra (king of the gods) and ruled by Mercury, Jyeshtha combines intellectual brilliance with warrior-like authority. The circular amulet symbolizes protection and the talismanic power of this nakshatra. Jyeshtha natives often become the head of their family or organization, bearing the burdens of leadership with a mixture of pride and weariness."
+    },
+    {
+      "id": "mula",
+      "name": "Mula",
+      "number": 19,
+      "rulingPlanet": "Ketu",
+      "deity": "Nirriti (Goddess of Destruction & Dissolution)",
+      "zodiacSpan": "0°00' – 13°20' Sagittarius",
+      "symbol": "Bunch of Roots / Tied Bunch / Lion's Tail",
+      "animalSymbol": "Male Dog",
+      "gana": "Rakshasa (Demonic)",
+      "quality": "Tikshna (Sharp / Dreadful)",
+      "element": "Air",
+      "positiveTraits": [
+        "Investigative",
+        "Root-seeking",
+        "Philosophical",
+        "Transformative",
+        "Powerful"
+      ],
+      "negativeTraits": [
+        "Destructive",
+        "Nihilistic",
+        "Self-sabotaging",
+        "Arrogant"
+      ],
+      "description": "Mula means 'the root,' representing the primal origin, foundation, and the quest to uncover fundamental truths. Presided by Nirriti (goddess of destruction and calamity) and ruled by Ketu, Mula is one of the most intense nakshatras — associated with uprooting established structures, investigating root causes, and experiencing profound spiritual awakening through loss and destruction. Mula natives are natural researchers, archaeologists, and philosophers who dig deep to find the core truth of any matter."
+    },
+    {
+      "id": "purva_ashadha",
+      "name": "Purva Ashadha",
+      "number": 20,
+      "rulingPlanet": "Venus",
+      "deity": "Apas (Water Goddess / Cosmic Waters)",
+      "zodiacSpan": "13°20' – 26°40' Sagittarius",
+      "symbol": "Elephant's Tusk / Fan / Winnowing Basket",
+      "animalSymbol": "Male Monkey",
+      "gana": "Manushya (Human)",
+      "quality": "Ugra (Fierce / Severe)",
+      "element": "Air",
+      "positiveTraits": [
+        "Invincible spirit",
+        "Purifying",
+        "Rejuvenating",
+        "Convincing speaker",
+        "Courageous"
+      ],
+      "negativeTraits": [
+        "Overconfident",
+        "Boastful",
+        "Uncompromising",
+        "Prideful"
+      ],
+      "description": "Purva Ashadha means 'the former invincible one,' representing the invincible spirit, purification through water, and early victory. Presided by Apas (the cosmic waters) and ruled by Venus, this nakshatra combines the purifying power of water with Venusian charm and persuasion. The winnowing basket symbolizes the process of separating truth from falsehood. Purva Ashadha natives are charismatic debaters and orators who can convince anyone of their position."
+    },
+    {
+      "id": "uttara_ashadha",
+      "name": "Uttara Ashadha",
+      "number": 21,
+      "rulingPlanet": "Sun",
+      "deity": "Vishvadevas (Universal Gods / Ten Virtues)",
+      "zodiacSpan": "26°40' Sagittarius – 10°00' Capricorn",
+      "symbol": "Elephant's Tusk / Small Bed",
+      "animalSymbol": "Male Mongoose",
+      "gana": "Manushya (Human)",
+      "quality": "Dhruva (Fixed / Steady)",
+      "element": "Air",
+      "positiveTraits": [
+        "Virtuous",
+        "Committed",
+        "Leadership",
+        "Enduring",
+        "Universally respected"
+      ],
+      "negativeTraits": [
+        "Rigid",
+        "Unyielding",
+        "Lonely at the top",
+        "Self-righteous"
+      ],
+      "description": "Uttara Ashadha means 'the latter invincible one,' representing the final, lasting victory that comes through righteousness and perseverance. Presided by the Vishvadevas (personifications of universal virtues) and ruled by the Sun, this nakshatra bestows an unwavering commitment to truth and duty. Unlike Purva Ashadha's early victory, Uttara Ashadha's triumph is the enduring kind — earned through sustained effort, moral integrity, and the support of universal forces."
+    },
+    {
+      "id": "shravana",
+      "name": "Shravana",
+      "number": 22,
+      "rulingPlanet": "Moon",
+      "deity": "Vishnu (Preserver God / The All-Pervading)",
+      "zodiacSpan": "10°00' – 23°20' Capricorn",
+      "symbol": "Ear / Three Footprints",
+      "animalSymbol": "Female Monkey",
+      "gana": "Deva (Divine)",
+      "quality": "Chara (Movable / Temporary)",
+      "element": "Air",
+      "positiveTraits": [
+        "Learned",
+        "Excellent listener",
+        "Organized",
+        "Connected",
+        "Knowledgeable"
+      ],
+      "negativeTraits": [
+        "Gossip-prone",
+        "Over-sensitive to criticism",
+        "Jealous",
+        "Rigid thinking"
+      ],
+      "description": "Shravana is the nakshatra of listening, learning, and the transmission of knowledge. The ear symbol represents the primary mode of learning in Vedic tradition — through hearing sacred knowledge from a guru. Presided by Vishnu (the preserver and sustainer of the universe) and ruled by the Moon, Shravana bestows the ability to absorb, organize, and transmit vast amounts of knowledge. Shravana natives are excellent students, teachers, journalists, and counsellors."
+    },
+    {
+      "id": "dhanishtha",
+      "name": "Dhanishtha",
+      "number": 23,
+      "rulingPlanet": "Mars",
+      "deity": "Vasus (Eight Elemental Gods)",
+      "zodiacSpan": "23°20' Capricorn – 6°40' Aquarius",
+      "symbol": "Drum / Flute (Mridanga)",
+      "animalSymbol": "Female Lion",
+      "gana": "Rakshasa (Demonic)",
+      "quality": "Chara (Movable / Temporary)",
+      "element": "Ether",
+      "positiveTraits": [
+        "Wealthy",
+        "Musical",
+        "Rhythmic",
+        "Generous",
+        "Brave"
+      ],
+      "negativeTraits": [
+        "Aggressive",
+        "Self-absorbed",
+        "Marital issues",
+        "Overambitious"
+      ],
+      "description": "Dhanishtha means 'the wealthiest' or 'the star of symphony,' representing abundance, musical talent, and rhythmic harmony. The drum symbolizes the cosmic rhythm that underlies all creation. Presided by the Vasus (eight elemental gods governing natural forces) and ruled by Mars, Dhanishtha bestows both material wealth and the ability to create harmony through sound and rhythm. Natives often have musical talent and a natural sense of timing."
+    },
+    {
+      "id": "shatabhisha",
+      "name": "Shatabhisha",
+      "number": 24,
+      "rulingPlanet": "Rahu",
+      "deity": "Varuna (God of Cosmic Waters & Law)",
+      "zodiacSpan": "6°40' – 20°00' Aquarius",
+      "symbol": "Empty Circle / 100 Flowers or Stars / 100 Physicians",
+      "animalSymbol": "Female Horse",
+      "gana": "Rakshasa (Demonic)",
+      "quality": "Chara (Movable / Temporary)",
+      "element": "Ether",
+      "positiveTraits": [
+        "Healing abilities",
+        "Philosophical",
+        "Independent",
+        "Mystical",
+        "Scientific"
+      ],
+      "negativeTraits": [
+        "Secretive",
+        "Reclusive",
+        "Harsh speech",
+        "Addictive tendencies"
+      ],
+      "description": "Shatabhisha means 'hundred physicians' or 'hundred healers,' representing the power of healing, cosmic mysteries, and the veil between seen and unseen worlds. The empty circle symbolizes the cosmic void, maya (illusion), and the hidden truths of existence. Presided by Varuna (god of cosmic law and ocean depths) and ruled by Rahu, Shatabhisha bestows deep healing abilities, interest in space science, and the capacity to see through illusions."
+    },
+    {
+      "id": "purva_bhadrapada",
+      "name": "Purva Bhadrapada",
+      "number": 25,
+      "rulingPlanet": "Jupiter",
+      "deity": "Aja Ekapad (One-Footed Goat / Cosmic Fire)",
+      "zodiacSpan": "20°00' Aquarius – 3°20' Pisces",
+      "symbol": "Front of Funeral Cot / Sword / Two-Faced Man",
+      "animalSymbol": "Male Lion",
+      "gana": "Manushya (Human)",
+      "quality": "Ugra (Fierce / Severe)",
+      "element": "Ether",
+      "positiveTraits": [
+        "Passionate",
+        "Transformative",
+        "Idealistic",
+        "Scholarly",
+        "Powerful"
+      ],
+      "negativeTraits": [
+        "Extreme",
+        "Two-faced",
+        "Cynical",
+        "Dark thoughts",
+        "Domineering"
+      ],
+      "description": "Purva Bhadrapada is the nakshatra of the mystical fire, radical transformation, and the transition between the material and spiritual worlds. The two-faced man symbolizes the duality of this nakshatra — one face looking toward worldly achievement, the other toward spiritual liberation. Presided by Aja Ekapad (the one-footed goat, a form of cosmic fire) and ruled by Jupiter, this nakshatra bestows intense passion, philosophical depth, and the power to burn through karmic bonds."
+    },
+    {
+      "id": "uttara_bhadrapada",
+      "name": "Uttara Bhadrapada",
+      "number": 26,
+      "rulingPlanet": "Saturn",
+      "deity": "Ahir Budhnya (Serpent of the Deep / Kundalini)",
+      "zodiacSpan": "3°20' – 16°40' Pisces",
+      "symbol": "Back of Funeral Cot / Twin (Serpent in Water)",
+      "animalSymbol": "Female Cow",
+      "gana": "Manushya (Human)",
+      "quality": "Dhruva (Fixed / Steady)",
+      "element": "Ether",
+      "positiveTraits": [
+        "Wise",
+        "Compassionate",
+        "Enduring",
+        "Spiritual depth",
+        "Charitable"
+      ],
+      "negativeTraits": [
+        "Lazy",
+        "Irresponsible",
+        "Withdrawn",
+        "Secretive"
+      ],
+      "description": "Uttara Bhadrapada is the nakshatra of cosmic wisdom, deep sleep, and the kundalini serpent resting at the ocean floor. While its predecessor (Purva Bhadrapada) represents fire and passion, Uttara Bhadrapada represents the cool depths of the cosmic ocean — wisdom gained through surrender and stillness. Presided by Ahir Budhnya (the serpent of the deep) and ruled by Saturn, this nakshatra bestows profound spiritual wisdom, extraordinary patience, and the ability to endure suffering with grace."
+    },
+    {
+      "id": "revati",
+      "name": "Revati",
+      "number": 27,
+      "rulingPlanet": "Mercury",
+      "deity": "Pushan (Nourishing Sun God / Guide of Souls)",
+      "zodiacSpan": "16°40' – 30°00' Pisces",
+      "symbol": "Fish / Drum",
+      "animalSymbol": "Female Elephant",
+      "gana": "Deva (Divine)",
+      "quality": "Mridu (Soft / Gentle)",
+      "element": "Ether",
+      "positiveTraits": [
+        "Nurturing",
+        "Wealthy",
+        "Creative",
+        "Compassionate",
+        "Safe harbors"
+      ],
+      "negativeTraits": [
+        "Over-protective",
+        "Dependent",
+        "Too sympathetic",
+        "Victimhood"
+      ],
+      "description": "Revati is the last of the 27 nakshatras, representing the final journey of the soul, safe passage, and nurturing wealth. The fish swimming in the cosmic ocean symbolizes the soul navigating through the waters of existence toward its final destination. Presided by Pushan (the nourishing sun god who guides souls on their journey) and ruled by Mercury, Revati bestows a gentle, prosperous, and deeply creative nature. Revati natives are natural protectors who provide safe harbor for all beings."
+    }
+  ]
+}

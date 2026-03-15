@@ -25,6 +25,15 @@ In the output, you'll find options to open the app in a
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
+## Features
+
+- **Error boundaries** – Root-level error handling to prevent crashes
+- **Subscription system** – Pro features (Pro Tips, Pro Modal) behind optional subscription
+- **API client** – Configurable backend integration via `EXPO_PUBLIC_API_BASE_URL`
+- **Bundle optimizations** – Metro minifier config for smaller builds
+
+See [docs/SUBSCRIPTION_SETUP.md](docs/SUBSCRIPTION_SETUP.md) for subscription and monetization setup.
+
 ## Get a fresh project
 
 When you're ready, run:
