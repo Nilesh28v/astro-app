@@ -2,18 +2,23 @@ import Constants from 'expo-constants';
 import { Platform } from 'react-native';
 
 const getApiUrl = () => {
-    // If we're on the web, just use localhost
+    // 1. Check for environment variable (useful for local development)
+    const envUrl = process.env.EXPO_PUBLIC_API_BASE_URL;
+    if (envUrl) {
+        return envUrl.endsWith('/api') ? envUrl : `${envUrl}/api`;
+    }
+
+    // 2. Production Fallback (Hardcoded IP for EC2)
+    // This ensures that APKs built without env variables still connect to the right place
+    const LIVE_BACKEND_URL = 'http://13.62.227.112:4005';
+    
+    // 3. Fallback for Web
     if (Platform.OS === 'web') {
         return 'http://localhost:3000/api';
     }
 
-    // Attempt to get the debugger host from Expo constants
-    // This works for Expo Go/Development builds to find the computer's IP
-    const debuggerHost = Constants.expoConfig?.hostUri;
-    const address = debuggerHost ? debuggerHost.split(':')[0] : 'localhost';
-
-    // iOS, Android real device, and emulator all use the detected address
-    return `http://${address}:3000/api`;
+    // Default to Live Backend for now to ensure APK works
+    return `${LIVE_BACKEND_URL}/api`;
 };
 
 export const API_URL = getApiUrl();
