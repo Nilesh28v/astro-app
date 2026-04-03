@@ -306,6 +306,14 @@ export default function KundliInputScreen({ navigation }) {
                         >
                             <Text style={styles.generateButtonText}>{t('create_kundli')}</Text>
                         </TouchableOpacity>
+
+                        <TouchableOpacity
+                            style={styles.matchmakingButton}
+                            onPress={() => navigation.navigate('Matchmaking')}
+                        >
+                            <Ionicons name="heart" size={20} color="#E74C3C" style={{ marginRight: 8 }} />
+                            <Text style={styles.matchmakingButtonText}>{language === 'hi' ? 'जीवनसाथी अनुकूलता' : 'Partner Compatibility'}</Text>
+                        </TouchableOpacity>
                     </View>
                 </ScrollView>
             </KeyboardAvoidingView>
@@ -462,6 +470,22 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: '600',
         color: '#FFFFFF',
+    },
+    matchmakingButton: {
+        flexDirection: 'row',
+        backgroundColor: '#FFF1F0',
+        borderWidth: 1,
+        borderColor: '#FADBD8',
+        borderRadius: 8,
+        padding: 16,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 16,
+    },
+    matchmakingButtonText: {
+        fontSize: 16,
+        fontWeight: '600',
+        color: '#E74C3C',
     },
     // Modal Styles
     modalOverlay: {

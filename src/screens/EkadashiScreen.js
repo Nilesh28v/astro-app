@@ -16,6 +16,7 @@ import { getNotificationsEnabled, setNotificationsEnabled } from '../utils/notif
 import { API_URL } from '../utils/apiConfig';
 import { useLanguage } from '../context/LanguageContext';
 import { ASTROLOGY_TRANSLATIONS } from '../utils/astrologyTranslations';
+import { fetchEkadashiDates } from '../utils/contentService';
 
 const EkadashiItem = ({ item, isNext, t, language, initialExpanded }) => {
     const [expanded, setExpanded] = useState(initialExpanded || false);
@@ -28,12 +29,22 @@ const EkadashiItem = ({ item, isNext, t, language, initialExpanded }) => {
     const formattedDate = date.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' });
     const dayName = date.toLocaleDateString(locale, { weekday: 'long' });
 
-    // Get Hindi translations for this ekadashi if available
-    const hiData = language === 'hi' ? ASTROLOGY_TRANSLATIONS.hi.ekadashi?.[item.name] : null;
-    const displayName = hiData?.name || item.name;
-    const displaySignificance = hiData?.significance || item.significance;
-    const displayRemedies = hiData?.remedies || item.remedies;
-    const displayRules = hiData?.dosAndDonts || item.dosAndDonts;
+    // Get Hindi translations — prefer API data, fall back to ASTROLOGY_TRANSLATIONS
+    const hiData = language === 'hi' ? (
+        item.name_hi ? item : ASTROLOGY_TRANSLATIONS.hi.ekadashi?.[item.name]
+    ) : null;
+    const displayName = (language === 'hi' && hiData?.name_hi) ? hiData.name_hi : (hiData?.name || item.name);
+    const displaySignificance = (language === 'hi' && item.significance_hi) ? item.significance_hi : (hiData?.significance || item.significance);
+    const displayRemedies = (language === 'hi' && item.remedies_hi) ? item.remedies_hi : (hiData?.remedies || item.remedies);
+    const displayRules = (language === 'hi' && item.dosAndDonts_hi) ? item.dosAndDonts_hi : (hiData?.dosAndDonts || item.dosAndDonts);
+
+    const isToday = useMemo(() => {
+        const eDate = new Date(item.date);
+        eDate.setHours(0, 0, 0, 0);
+        const todayStart = new Date();
+        todayStart.setHours(0, 0, 0, 0);
+        return eDate.getTime() === todayStart.getTime();
+    }, [item.date]);
 
     return (
         <TouchableOpacity
@@ -48,7 +59,11 @@ const EkadashiItem = ({ item, isNext, t, language, initialExpanded }) => {
                 </View>
                 <View style={styles.nameContainer}>
                     <Text style={[styles.ekadashiName, isNext && styles.nextEkadashiName]}>{displayName}</Text>
-                    {isNext && <View style={styles.activeLabel}><Text style={styles.activeLabelText}>{t('next_label')}</Text></View>}
+                    {isNext && (
+                        <View style={[styles.activeLabel, isToday && { backgroundColor: '#2E7D32' }]}>
+                            <Text style={styles.activeLabelText}>{isToday ? (t('today') || 'TODAY').toUpperCase() : t('next_label')}</Text>
+                        </View>
+                    )}
                 </View>
                 <Ionicons
                     name={expanded ? 'chevron-up' : 'chevron-down'}
@@ -87,11 +102,12 @@ export default function EkadashiScreen({ route }) {
     const [notificationsEnabled, setNotificationsEnabledState] = useState(false);
     const [upcomingPrecise, setUpcomingPrecise] = useState(null);
     const [loading, setLoading] = useState(false);
+    const [ekadashiData, setEkadashiData] = useState(EKADASHI_DATA);
     const now = new Date();
 
 
 
-    const fetchUpcomingEkadashi = async () => {
+    const fetchUpcomingEkadashiPrecise = async () => {
         setLoading(true);
         try {
             const today = now.toISOString().split('T')[0];
@@ -112,7 +128,18 @@ export default function EkadashiScreen({ route }) {
             setNotificationsEnabledState(enabled);
         };
         loadSettings();
-        fetchUpcomingEkadashi();
+        fetchUpcomingEkadashiPrecise();
+
+        // Fetch ekadashi list from content API (falls back to local EKADASHI_DATA)
+        const loadContent = async () => {
+            try {
+                const data = await fetchEkadashiDates(EKADASHI_DATA);
+                if (data && data.length > 0) {
+                    setEkadashiData(data);
+                }
+            } catch (_) {}
+        };
+        loadContent();
     }, []);
 
     const handleToggleNotifications = async (value) => {
@@ -121,9 +148,15 @@ export default function EkadashiScreen({ route }) {
     };
 
     const nextEkadashiId = useMemo(() => {
-        const future = EKADASHI_DATA.find(e => new Date(e.date) >= now);
+        const todayStart = new Date();
+        todayStart.setHours(0, 0, 0, 0);
+        const future = ekadashiData.find(e => {
+            const eDate = new Date(e.date);
+            eDate.setHours(0, 0, 0, 0);
+            return eDate >= todayStart;
+        });
         return future ? future.id : null;
-    }, []);
+    }, [ekadashiData]);
 
     return (
         <SafeAreaView style={styles.container}>
@@ -156,7 +189,7 @@ export default function EkadashiScreen({ route }) {
             )}
 
             <FlatList
-                data={EKADASHI_DATA}
+                data={ekadashiData}
                 keyExtractor={(item) => item.id}
                 renderItem={({ item }) => (
                     <EkadashiItem 
@@ -164,7 +197,7 @@ export default function EkadashiScreen({ route }) {
                         isNext={item.id === nextEkadashiId} 
                         t={t} 
                         language={language} 
-                        initialExpanded={item.id === route.params?.expandId}
+                        initialExpanded={route.params?.expandId ? item.id === route.params.expandId : item.id === nextEkadashiId}
                     />
                 )}
                 contentContainerStyle={styles.listContent}

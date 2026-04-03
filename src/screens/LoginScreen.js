@@ -19,9 +19,16 @@ import {
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import { API_URL } from '../utils/apiConfig';
+import { GoogleSignin } from '@react-native-google-signin/google-signin';
+import auth from '@react-native-firebase/auth';
+
+GoogleSignin.configure({
+    webClientId: '781799938812-lfbd77fd9uf9fdei3i4tkp99ed2ui8tf.apps.googleusercontent.com',
+});
 
 export default function LoginScreen() {
-    const { t, language } = useLanguage();
+    const { t, language, setExplicitLanguage } = useLanguage();
+    const [selectedLang, setSelectedLang] = useState(language || 'en');
     const [isLogin, setIsLogin] = useState(true);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -43,7 +50,7 @@ export default function LoginScreen() {
     const [loadingLocation, setLoadingLocation] = useState(false);
 
     const [loading, setLoading] = useState(false);
-    const { login, signup, loginAsGuest } = useAuth();
+    const { login, signup, loginAsGuest, loginWithGoogle } = useAuth();
 
     const fetchStates = async () => {
         setLoadingLocation(true);
@@ -147,10 +154,12 @@ export default function LoginScreen() {
                     return;
                 }
                 
-                // Format details for signup
-                const formattedDob = birthDate.toISOString().split('T')[0];
-                const formattedTob = birthDate.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
                 
+                // Set language immediately before concluding signup
+                if (setExplicitLanguage) {
+                    await setExplicitLanguage(selectedLang);
+                }
+
                 await signup(email, password, { 
                     name, 
                     dob: formattedDob, 
@@ -168,7 +177,27 @@ export default function LoginScreen() {
     };
 
     const handleGoogleLogin = async () => {
-        Alert.alert('Information', 'Google Login requires native Firebase configuration which is currently disabled.');
+        try {
+            setLoading(true);
+            await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
+            
+            const userInfo = await GoogleSignin.signIn();
+            const idToken = userInfo?.data?.idToken || userInfo?.idToken;
+            
+            if (!idToken) throw new Error("No ID token returned from Google.");
+            
+            const googleCredential = auth.GoogleAuthProvider.credential(idToken);
+            const userCredential = await auth().signInWithCredential(googleCredential);
+            
+            if (loginWithGoogle) {
+                await loginWithGoogle(userCredential.user);
+            }
+        } catch (error) {
+            console.error(error);
+            Alert.alert('Google Login Error', error.message || 'An error occurred during Google Login.');
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -179,7 +208,6 @@ export default function LoginScreen() {
             >
                 <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
                     <View style={styles.header}>
-                        <Text style={styles.icon}>🌌</Text>
                         <Text style={styles.title}>Jyotish Guru</Text>
                         <Text style={styles.subtitle}>Unlock Your Cosmic Potential</Text>
                     </View>
@@ -202,6 +230,24 @@ export default function LoginScreen() {
                     <View style={styles.form}>
                         {!isLogin && (
                             <>
+                                <View style={styles.languageToggleContainer}>
+                                    <Text style={styles.languageToggleLabel}>Preferred Language:</Text>
+                                    <View style={styles.languageToggleButtons}>
+                                        <TouchableOpacity
+                                            style={[styles.langBtn, selectedLang === 'en' && styles.activeLangBtn]}
+                                            onPress={() => setSelectedLang('en')}
+                                        >
+                                            <Text style={[styles.langBtnText, selectedLang === 'en' && styles.activeLangBtnText]}>English</Text>
+                                        </TouchableOpacity>
+                                        <TouchableOpacity
+                                            style={[styles.langBtn, selectedLang === 'hi' && styles.activeLangBtn]}
+                                            onPress={() => setSelectedLang('hi')}
+                                        >
+                                            <Text style={[styles.langBtnText, selectedLang === 'hi' && styles.activeLangBtnText]}>हिंदी</Text>
+                                        </TouchableOpacity>
+                                    </View>
+                                </View>
+                                
                                 <View style={styles.inputContainer}>
                                     <Ionicons name="person-outline" size={20} color="#B8860B" style={styles.inputIcon} />
                                     <TextInput
@@ -216,21 +262,21 @@ export default function LoginScreen() {
 
                                 <View style={styles.inputRow}>
                                     <TouchableOpacity 
-                                        style={[styles.inputContainer, { flex: 1, marginRight: 8 }]}
+                                        style={[styles.inputContainer, { flex: 1.4, marginRight: 4 }]}
                                         onPress={() => setShowDatePicker(true)}
                                     >
                                         <Ionicons name="calendar-outline" size={20} color="#B8860B" style={styles.inputIcon} />
-                                        <Text style={[styles.input, !birthDate && { color: '#999' }]}>
+                                        <Text style={[styles.input, !birthDate && { color: '#999' }]} numberOfLines={1} adjustsFontSizeToFit>
                                             {birthDate ? birthDate.toLocaleDateString(language === 'hi' ? 'hi-IN' : 'en-IN') : 'Date of Birth'}
                                         </Text>
                                     </TouchableOpacity>
                                     
                                     <TouchableOpacity 
-                                        style={[styles.inputContainer, { flex: 1, marginLeft: 8 }]}
+                                        style={[styles.inputContainer, { flex: 1, marginLeft: 4 }]}
                                         onPress={() => setShowTimePicker(true)}
                                     >
                                         <Ionicons name="time-outline" size={20} color="#B8860B" style={styles.inputIcon} />
-                                        <Text style={[styles.input, !birthDate && { color: '#999' }]}>
+                                        <Text style={[styles.input, !birthDate && { color: '#999' }]} numberOfLines={1} adjustsFontSizeToFit>
                                             {birthDate ? birthDate.toLocaleTimeString(language === 'hi' ? 'hi-IN' : 'en-IN', { hour: '2-digit', minute: '2-digit' }) : 'Time'}
                                         </Text>
                                     </TouchableOpacity>
@@ -323,10 +369,7 @@ export default function LoginScreen() {
                         <Text style={styles.socialButtonText}>Continue with Google</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.guestButton} onPress={loginAsGuest}>
-                        <Text style={styles.guestButtonText}>Continue as Guest</Text>
-                        <Ionicons name="arrow-forward" size={16} color="#B8860B" />
-                    </TouchableOpacity>
+                    {/* Guest button removed by request */}
 
                     <Text style={styles.footerText}>
                         By continuing, you agree to our Terms of Service and Privacy Policy.
@@ -455,6 +498,40 @@ const styles = StyleSheet.create({
     },
     form: {
         marginBottom: 20,
+    },
+    languageToggleContainer: {
+        marginBottom: 20,
+    },
+    languageToggleLabel: {
+        fontSize: 14,
+        color: '#666',
+        marginBottom: 8,
+        fontWeight: '500',
+    },
+    languageToggleButtons: {
+        flexDirection: 'row',
+        gap: 12,
+    },
+    langBtn: {
+        flex: 1,
+        borderWidth: 1,
+        borderColor: '#EBE7E0',
+        backgroundColor: '#FFF',
+        borderRadius: 12,
+        paddingVertical: 12,
+        alignItems: 'center',
+    },
+    activeLangBtn: {
+        backgroundColor: '#B8860B',
+        borderColor: '#B8860B',
+    },
+    langBtnText: {
+        fontSize: 16,
+        color: '#666',
+        fontWeight: '600',
+    },
+    activeLangBtnText: {
+        color: '#FFF',
     },
     inputContainer: {
         flexDirection: 'row',

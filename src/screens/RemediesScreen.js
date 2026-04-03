@@ -1,10 +1,11 @@
 import { Ionicons } from '@expo/vector-icons';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { FlatList, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useLanguage } from '../context/LanguageContext';
 import { REMEDIES_DATA, REMEDIES_DATA_HI } from '../utils/remediesData';
 import { getZodiacSymbol } from '../utils/horoscopeEngine';
+import { fetchRemedies } from '../utils/contentService';
 
 const ZODIAC_KEYS = [
     'aries', 'taurus', 'gemini', 'cancer', 'leo', 'virgo',
@@ -39,7 +40,27 @@ export default function RemediesScreen() {
     const key = ZODIAC_KEYS[selected];
 
     const currentRemediesData = language === 'hi' ? REMEDIES_DATA_HI : REMEDIES_DATA;
-    const data = currentRemediesData[key];
+    const localData = currentRemediesData[key];
+    const [apiData, setApiData] = useState(null);
+
+    // Fetch from API when sign or language changes
+    useEffect(() => {
+        let cancelled = false;
+        const load = async () => {
+            try {
+                const result = await fetchRemedies(key, language === 'hi' ? 'hi' : 'en', null);
+                if (!cancelled && result) setApiData(result);
+            } catch (_) {
+                // API unavailable — local data is used
+            }
+        };
+        setApiData(null); // Reset while loading new sign
+        load();
+        return () => { cancelled = true; };
+    }, [key, language]);
+
+    // Use API data if available, otherwise local
+    const data = apiData || localData;
 
     const handleSelect = (idx) => {
         setSelected(idx);

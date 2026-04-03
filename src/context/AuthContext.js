@@ -1,5 +1,6 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createContext, useContext, useEffect, useState } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { registerPushToken } from '../utils/notificationService';
 
 const AuthContext = createContext({});
 
@@ -10,6 +11,12 @@ export const AuthProvider = ({ children }) => {
     useEffect(() => {
         checkUserSession();
     }, []);
+
+    useEffect(() => {
+        if (user && !user.isGuest) {
+            registerPushToken(user.email);
+        }
+    }, [user]);
 
     const checkUserSession = async () => {
         try {
@@ -33,6 +40,7 @@ export const AuthProvider = ({ children }) => {
         };
         await AsyncStorage.setItem('@user_session', JSON.stringify(mockUser));
         setUser(mockUser);
+        registerPushToken(mockUser.email);
     };
 
     const signup = async (email, password, extraDetails = {}) => {
@@ -45,6 +53,7 @@ export const AuthProvider = ({ children }) => {
         };
         await AsyncStorage.setItem('@user_session', JSON.stringify(mockUser));
         setUser(mockUser);
+        registerPushToken(mockUser.email);
     };
 
     const logout = async () => {
@@ -62,6 +71,18 @@ export const AuthProvider = ({ children }) => {
         setUser(guestUser);
     };
 
+    const loginWithGoogle = async (googleUser) => {
+        const mockUser = {
+            displayName: googleUser.displayName || (googleUser.email ? googleUser.email.split('@')[0] : 'Google User'),
+            email: googleUser.email || '',
+            isGuest: false,
+            photoURL: googleUser.photoURL || null
+        };
+        await AsyncStorage.setItem('@user_session', JSON.stringify(mockUser));
+        setUser(mockUser);
+        registerPushToken(mockUser.email);
+    };
+
     return (
         <AuthContext.Provider value={{
             user,
@@ -71,6 +92,7 @@ export const AuthProvider = ({ children }) => {
             signup,
             logout,
             loginAsGuest,
+            loginWithGoogle,
         }}>
             {children}
         </AuthContext.Provider>

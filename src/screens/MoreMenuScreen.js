@@ -1,8 +1,10 @@
 import { Ionicons } from '@expo/vector-icons';
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { useEffect, useState } from 'react';
+import { ScrollView, StyleSheet, Switch, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
+import { getDailyHoroscopeEnabled, setDailyHoroscopeEnabled } from '../utils/notificationService';
 
 
 const MenuItem = ({ icon, title, subtitle, color, onPress }) => (
@@ -21,6 +23,21 @@ const MenuItem = ({ icon, title, subtitle, color, onPress }) => (
 export default function MoreMenuScreen({ navigation }) {
     const { user, logout } = useAuth();
     const { language, toggleLanguage, t } = useLanguage();
+    const [dailyNotifEnabled, setDailyNotifEnabled] = useState(true);
+
+    useEffect(() => {
+        const loadPref = async () => {
+            const enabled = await getDailyHoroscopeEnabled();
+            setDailyNotifEnabled(enabled);
+        };
+        loadPref();
+    }, []);
+
+    const handleDailyNotifToggle = async (value) => {
+        setDailyNotifEnabled(value);
+        await setDailyHoroscopeEnabled(value);
+    };
+
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView contentContainerStyle={styles.scroll}>
@@ -50,6 +67,22 @@ export default function MoreMenuScreen({ navigation }) {
                             <View style={[styles.toggleCircle, language === 'hi' && styles.toggleCircleRight]} />
                         </View>
                     </TouchableOpacity>
+
+                    <View style={styles.notifToggle}>
+                        <View style={styles.languageIconBox}>
+                            <Ionicons name="notifications-outline" size={20} color="#B8860B" />
+                        </View>
+                        <View style={{ flex: 1 }}>
+                            <Text style={styles.languageLabel}>{t('daily_notification') || 'DAILY HOROSCOPE'}</Text>
+                            <Text style={styles.languageValue}>{dailyNotifEnabled ? (t('enabled') || 'Enabled') : (t('disabled') || 'Disabled')}</Text>
+                        </View>
+                        <Switch
+                            value={dailyNotifEnabled}
+                            onValueChange={handleDailyNotifToggle}
+                            trackColor={{ false: '#767577', true: '#F3E5AB' }}
+                            thumbColor={dailyNotifEnabled ? '#B8860B' : '#f4f3f4'}
+                        />
+                    </View>
                 </View>
 
                 <View style={styles.section}>
@@ -148,6 +181,11 @@ const styles = StyleSheet.create({
     logoutBtn: { padding: 8 },
     userCard: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#FFFBF0', borderRadius: 14, padding: 14, borderWidth: 1, borderColor: '#F3E5AB' },
     languageToggle: {
+        flexDirection: 'row', alignItems: 'center', backgroundColor: '#FFF',
+        borderRadius: 14, padding: 14, marginTop: 10,
+        borderWidth: 1, borderColor: '#EBE7E0',
+    },
+    notifToggle: {
         flexDirection: 'row', alignItems: 'center', backgroundColor: '#FFF',
         borderRadius: 14, padding: 14, marginTop: 10,
         borderWidth: 1, borderColor: '#EBE7E0',

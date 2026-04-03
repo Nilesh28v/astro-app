@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "781799938812",
+    "project_id": "astro-app-81137",
+    "storage_bucket": "astro-app-81137.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781799938812:android:27fff586cb60f97c8f5579",
+        "android_client_info": {
+          "package_name": "com.jyotishguru.astroapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "781799938812-07c1ikckgerksrk52vbh0kbvov5r631p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jyotishguru.astroapp",
+            "certificate_hash": "33dfd38b0639fd1080f804713d6b170f46418a5e"
+          }
+        },
+        {
+          "client_id": "781799938812-i3v1k34sth3ghi2u16acvgpndl4njovj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jyotishguru.astroapp",
+            "certificate_hash": "73cb6f48bc7444fbc9c77dda236abea85be7ba52"
+          }
+        },
+        {
+          "client_id": "781799938812-vs495d0jfr0cu88q1f34c6sgpbotu49s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jyotishguru.astroapp",
+            "certificate_hash": "9fa5e3cf980c670eb30bc07c34b1f0e5616cae7c"
+          }
+        },
+        {
+          "client_id": "781799938812-lfbd77fd9uf9fdei3i4tkp99ed2ui8tf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNeVGaPAdsBQWkFiv5X6dhimnVRy-XWJU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "781799938812-lfbd77fd9uf9fdei3i4tkp99ed2ui8tf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

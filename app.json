@@ -7,7 +7,7 @@
     "icon": "./assets/images/icon.png",
     "scheme": "astroapp",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": false,
+    "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.jyotishguru.astroapp"
@@ -15,6 +15,8 @@
     "android": {
       "package": "com.jyotishguru.astroapp",
       "versionCode": 1,
+      "usesCleartextTraffic": true,
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "backgroundColor": "#FDFBF7",
         "foregroundImage": "./assets/images/adaptive-icon.png"
@@ -34,7 +36,19 @@
           "backgroundColor": "#FDFBF7"
         }
       ],
-      "@react-native-community/datetimepicker"
+      "@react-native-community/datetimepicker",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true,
+            "enableProguardInReleaseBuilds": true,
+            "enableShrinkResourcesInReleaseBuilds": true
+          }
+        }
+      ],
+      "@react-native-firebase/app",
+      "@react-native-google-signin/google-signin"
     ],
     "extra": {
       "eas": {

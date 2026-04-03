@@ -1,13 +1,15 @@
 import { Ionicons } from '@expo/vector-icons';
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useLanguage } from '../context/LanguageContext';
 import { useAuth } from '../context/AuthContext';
 import { EKADASHI_DATA } from '../utils/ekadashiData';
 import { ASTROLOGY_TRANSLATIONS } from '../utils/astrologyTranslations';
-import { getNotificationsEnabled, scheduleEkadashiNotifications } from '../utils/notificationService';
+import { getNotificationsEnabled, scheduleEkadashiNotifications, requestNotificationPermissions } from '../utils/notificationService';
 import { calculatePanchang, getDailyTip } from '../utils/panchangEngine';
+import { updateStreak, getStreakMessage } from '../utils/streakService';
+import { fetchDailyTip, fetchUpcomingEkadashi } from '../utils/contentService';
 
 const QuickAccessCard = ({ icon, title, subtitle, color, onPress }) => (
     <TouchableOpacity style={[styles.quickCard, { borderLeftColor: color }]} onPress={onPress} activeOpacity={0.7}>
@@ -30,26 +32,88 @@ export default function HomeScreen({ navigation }) {
     const { user } = useAuth();
     const today = new Date();
     const panchang = useMemo(() => calculatePanchang(today, language), [language]);
-    const dailyTip = useMemo(() => getDailyTip(today), []);
+    const localTip = useMemo(() => getDailyTip(today), []);
+    const [dailyTip, setDailyTip] = useState(localTip);
+    const [streak, setStreak] = useState(0);
+    const [apiEkadashi, setApiEkadashi] = useState(null);
+
+    // Determine user's rashi from their DOB
+    const userRashi = useMemo(() => {
+        if (!user?.dob) return null;
+        const [y, m, d] = user.dob.split('-').map(Number);
+        const month = m;
+        const day = d;
+        if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) return 'Aries';
+        if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) return 'Taurus';
+        if ((month === 5 && day >= 21) || (month === 6 && day <= 20)) return 'Gemini';
+        if ((month === 6 && day >= 21) || (month === 7 && day <= 22)) return 'Cancer';
+        if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) return 'Leo';
+        if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) return 'Virgo';
+        if ((month === 9 && day >= 23) || (month === 10 && day <= 22)) return 'Libra';
+        if ((month === 10 && day >= 23) || (month === 11 && day <= 21)) return 'Scorpio';
+        if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) return 'Sagittarius';
+        if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) return 'Capricorn';
+        if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) return 'Aquarius';
+        if ((month === 2 && day >= 19) || (month === 3 && day <= 20)) return 'Pisces';
+        return null;
+    }, [user?.dob]);
+
+    const RASHI_EMOJIS = {
+        'Aries': '♈', 'Taurus': '♉', 'Gemini': '♊', 'Cancer': '♋',
+        'Leo': '♌', 'Virgo': '♍', 'Libra': '♎', 'Scorpio': '♏',
+        'Sagittarius': '♐', 'Capricorn': '♑', 'Aquarius': '♒', 'Pisces': '♓',
+    };
 
     useEffect(() => {
-        const refreshNotifications = async () => {
-            const enabled = await getNotificationsEnabled();
-            if (enabled) {
-                await scheduleEkadashiNotifications();
+        const init = async () => {
+            // Update streak counter
+            const currentStreak = await updateStreak();
+            setStreak(currentStreak);
+
+            // Fetch daily tip from API (falls back to local)
+            try {
+                const tip = await fetchDailyTip(() => getDailyTip(today));
+                if (tip) setDailyTip(tip);
+            } catch (_) {}
+
+            // Fetch upcoming ekadashi from API (falls back to local)
+            try {
+                const ekData = await fetchUpcomingEkadashi(EKADASHI_DATA);
+                if (ekData?.next) setApiEkadashi(ekData.next);
+            } catch (_) {}
+
+            // Schedule Ekadashi notifications
+            const ekEnabled = await getNotificationsEnabled();
+            if (ekEnabled) {
+                const hasPermission = await requestNotificationPermissions();
+                if (hasPermission) {
+                    await scheduleEkadashiNotifications();
+                }
             }
         };
-        refreshNotifications();
-    }, []);
+        init();
+    }, [userRashi]);
 
     const nextEkadashi = useMemo(() => {
-        return EKADASHI_DATA.find(e => new Date(e.date) >= today);
-    }, []);
+        // Prefer API data, fall back to local
+        if (apiEkadashi) return apiEkadashi;
+        const todayStart = new Date();
+        todayStart.setHours(0, 0, 0, 0);
+        return EKADASHI_DATA.find(e => {
+            const eDate = new Date(e.date);
+            eDate.setHours(0, 0, 0, 0);
+            return eDate >= todayStart;
+        });
+    }, [apiEkadashi]);
 
     const daysUntilEkadashi = useMemo(() => {
         if (!nextEkadashi) return null;
-        const diff = new Date(nextEkadashi.date) - today;
-        return Math.ceil(diff / (1000 * 60 * 60 * 24));
+        const eDate = new Date(nextEkadashi.date);
+        eDate.setHours(0, 0, 0, 0);
+        const todayStart = new Date();
+        todayStart.setHours(0, 0, 0, 0);
+        const diff = eDate - todayStart;
+        return Math.round(diff / (1000 * 60 * 60 * 24));
     }, [nextEkadashi]);
 
     const dateStr = today.toLocaleDateString(language === 'hi' ? 'hi-IN' : 'en-IN', {
@@ -65,19 +129,32 @@ export default function HomeScreen({ navigation }) {
                         <View style={styles.heroTextContainer}>
                             <Text style={styles.heroTitle}>
                                 {t('namaste') || 'Namaste'}, {user?.name || user?.displayName?.split(' ')[0] || t('guest')}
+                                {userRashi ? ` ${RASHI_EMOJIS[userRashi] || ''}` : ''}
                             </Text>
-                            <Text style={styles.heroSubtitle}>{t('astro_companion')}</Text>
+                            <Text style={styles.heroSubtitle}>
+                                {userRashi ? userRashi + ' • ' : ''}{t('astro_companion')}
+                            </Text>
                         </View>
-                        <TouchableOpacity 
-                            style={styles.homeLanguageToggle} 
-                            onPress={toggleLanguage}
-                            activeOpacity={0.7}
-                        >
-                            <Text style={styles.homeLanguageText}>
-                                {language === 'en' ? 'हि' : 'EN'}
-                            </Text>
-                        </TouchableOpacity>
+                        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                            {streak > 0 && (
+                                <View style={styles.streakBadge}>
+                                    <Text style={styles.streakText}>🔥 {streak}</Text>
+                                </View>
+                            )}
+                            <TouchableOpacity 
+                                style={styles.homeLanguageToggle} 
+                                onPress={toggleLanguage}
+                                activeOpacity={0.7}
+                            >
+                                <Text style={styles.homeLanguageText}>
+                                    {language === 'en' ? 'हि' : 'EN'}
+                                </Text>
+                            </TouchableOpacity>
+                        </View>
                     </View>
+                    {streak > 0 && (
+                        <Text style={styles.streakMessage}>{getStreakMessage(streak)}</Text>
+                    )}
                     <Text style={styles.dateText}>{dateStr}</Text>
                 </View>
 
@@ -109,7 +186,7 @@ export default function HomeScreen({ navigation }) {
                 <View style={styles.tipCard}>
                     <Text style={styles.tipIcon}>{dailyTip.icon}</Text>
                     <Text style={styles.tipTitle}>{t('daily_tip')}</Text>
-                    <Text style={styles.tipText}>{dailyTip.tip}</Text>
+                    <Text style={styles.tipText}>{language === 'hi' && dailyTip.tip_hi ? dailyTip.tip_hi : dailyTip.tip}</Text>
                 </View>
 
                 {/* Ekadashi Countdown */}
@@ -133,8 +210,16 @@ export default function HomeScreen({ navigation }) {
                             </View>
                             <View style={styles.ekadashiContent}>
                                 <View style={styles.countdownCircle}>
-                                    <Text style={styles.countdownNumber}>{daysUntilEkadashi}</Text>
-                                    <Text style={styles.countdownLabel}>{t('days')}</Text>
+                                    {daysUntilEkadashi === 0 ? (
+                                        <Text style={[styles.countdownNumber, { fontSize: 16 }]} numberOfLines={1} adjustsFontSizeToFit>
+                                            {t('today') || 'Today'}
+                                        </Text>
+                                    ) : (
+                                        <>
+                                            <Text style={styles.countdownNumber}>{daysUntilEkadashi}</Text>
+                                            <Text style={styles.countdownLabel}>{t('days')}</Text>
+                                        </>
+                                    )}
                                 </View>
                                 <View style={styles.ekadashiDetails}>
                                     <Text style={styles.ekadashiName}>{displayName}</Text>
@@ -223,6 +308,12 @@ const styles = StyleSheet.create({
     },
     homeLanguageText: { fontSize: 14, fontWeight: '700', color: '#B8860B' },
     dateText: { fontSize: 14, color: '#666', marginTop: 12, fontWeight: '500' },
+    streakBadge: {
+        backgroundColor: '#FFF3E0', paddingHorizontal: 10, paddingVertical: 6,
+        borderRadius: 16, borderWidth: 1, borderColor: '#FFB74D',
+    },
+    streakText: { fontSize: 14, fontWeight: '700', color: '#E65100' },
+    streakMessage: { fontSize: 12, color: '#E65100', fontWeight: '500', marginTop: 6 },
     panchangCard: {
         backgroundColor: '#FFFBF0', borderRadius: 16, padding: 16, marginBottom: 16,
         borderWidth: 1, borderColor: '#F3E5AB',

@@ -32,12 +32,21 @@ export const LanguageProvider = ({ children }) => {
         }
     };
 
+    const setExplicitLanguage = async (newLang) => {
+        setLanguage(newLang);
+        try {
+            await AsyncStorage.setItem('@language', newLang);
+        } catch (e) {
+            console.error('Failed to save language', e);
+        }
+    };
+
     const t = (key) => {
         return translations[language]?.[key] || translations['en']?.[key] || key;
     };
 
     return (
-        <LanguageContext.Provider value={{ language, toggleLanguage, t }}>
+        <LanguageContext.Provider value={{ language, toggleLanguage, setExplicitLanguage, t }}>
             {children}
         </LanguageContext.Provider>
     );

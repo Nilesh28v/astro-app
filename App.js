@@ -1,10 +1,10 @@
 import { Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, StackActions } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useEffect, useState } from 'react';
-import { ActivityIndicator, LogBox, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, LogBox, StyleSheet, View, AppState } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import ErrorBoundary from './src/components/ErrorBoundary';
@@ -18,6 +18,8 @@ import HouseDetailsScreen from './src/screens/HouseDetailsScreen';
 import HousesScreen from './src/screens/HousesScreen';
 import KundliDisplayScreen from './src/screens/KundliDisplayScreen';
 import KundliInputScreen from './src/screens/KundliInputScreen';
+import MatchmakingScreen from './src/screens/MatchmakingScreen';
+import MatchResultScreen from './src/screens/MatchResultScreen';
 import MoreMenuScreen from './src/screens/MoreMenuScreen';
 import NakshatraDetailsScreen from './src/screens/NakshatraDetailsScreen';
 import NakshatrasScreen from './src/screens/NakshatrasScreen';
@@ -32,6 +34,7 @@ import PrivacyPolicyScreen from './src/screens/PrivacyPolicyScreen';
 import LoginScreen from './src/screens/LoginScreen';
 import { AuthProvider, useAuth } from './src/context/AuthContext';
 import { LanguageProvider, useLanguage } from './src/context/LanguageContext';
+import { scheduleRetentionNotification, cancelRetentionNotifications } from './src/utils/notificationService';
 
 const Tab = createBottomTabNavigator();
 const HomeStack = createNativeStackNavigator();
@@ -74,6 +77,8 @@ function KundliStackScreen() {
             <KundliStack.Screen name="KundliInput" component={KundliInputScreen} options={{ title: t('create_kundli') }} />
             <KundliStack.Screen name="SavedKundlis" component={SavedKundlisScreen} options={{ title: t('saved_kundlis') }} />
             <KundliStack.Screen name="KundliDisplay" component={KundliDisplayScreen} options={{ title: t('your_birth_chart') }} />
+            <KundliStack.Screen name="Matchmaking" component={MatchmakingScreen} options={{ title: 'Matchmaking' }} />
+            <KundliStack.Screen name="MatchResult" component={MatchResultScreen} options={{ title: 'Match Result' }} />
         </KundliStack.Navigator>
     );
 }
@@ -117,6 +122,19 @@ const AppContent = () => {
         // Suppress unwanted logs for a cleaner user experience
         LogBox.ignoreLogs(['Firebase', 'PushNotification']);
         checkDisclaimer();
+
+        // Handle Retention Notifications
+        const subscription = AppState.addEventListener('change', nextAppState => {
+            if (nextAppState === 'active') {
+                cancelRetentionNotifications();
+            } else if (nextAppState === 'background') {
+                scheduleRetentionNotification();
+            }
+        });
+
+        return () => {
+            subscription.remove();
+        };
     }, []);
 
     const checkDisclaimer = async () => {

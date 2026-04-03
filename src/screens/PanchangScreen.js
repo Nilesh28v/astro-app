@@ -1,5 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import DateTimePicker from '@react-native-community/datetimepicker';
+import * as React from 'react';
 import { useState, useEffect } from 'react';
 import {
     ActivityIndicator,
@@ -13,6 +14,8 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { API_URL } from '../utils/apiConfig';
 import { useLanguage } from '../context/LanguageContext';
+import { EKADASHI_DATA } from '../utils/ekadashiData';
+import { ASTROLOGY_TRANSLATIONS } from '../utils/astrologyTranslations';
 
 const PanchangDetail = ({ label, value, icon, color }) => (
     <View style={styles.detailCard}>
@@ -34,6 +37,20 @@ export default function PanchangScreen() {
     const [panchang, setPanchang] = useState(null);
     const [viewMode, setViewMode] = useState('day'); // 'day' or 'month'
     const [monthData, setMonthData] = useState([]);
+
+    const activeEkadashi = useState(() => {
+        // We will properly calculate this in useMemo since useState doesn't take dependencies
+    })[0]; 
+    // Wait, replacing with useMemo is cleaner
+    const ekadashiForDate = React.useMemo(() => {
+        const d = new Date(date);
+        d.setHours(0,0,0,0);
+        return EKADASHI_DATA.find(e => {
+            const eDate = new Date(e.date);
+            eDate.setHours(0,0,0,0);
+            return eDate.getTime() === d.getTime();
+        });
+    }, [date]);
 
     const fetchPanchang = async (selectedDate) => {
         setLoading(true);
@@ -191,6 +208,14 @@ export default function PanchangScreen() {
                     </View>
                 ) : panchang ? (
                     <View style={styles.content}>
+                        {ekadashiForDate && viewMode === 'day' && (
+                            <View style={styles.ekadashiAlert}>
+                                <Ionicons name="sparkles" size={20} color="#B8860B" />
+                                <Text style={styles.ekadashiAlertText}>
+                                    {language === 'hi' ? (ASTROLOGY_TRANSLATIONS.hi.ekadashi?.[ekadashiForDate.name]?.name || ekadashiForDate.name) : ekadashiForDate.name} • {language === 'hi' ? 'आज एकादशी है!' : 'Today is Ekadashi!'}
+                                </Text>
+                            </View>
+                        )}
                         <View style={styles.mainInsight}>
                             <Text style={styles.mainInsightTithi}>{panchang.tithi.name} {t('tithi')}</Text>
                             <Text style={styles.mainInsightPaksha}>{panchang.paksha} {t('paksha')}</Text>
@@ -282,6 +307,12 @@ const styles = StyleSheet.create({
     tithiNum: { fontSize: 10, color: '#B8860B', fontWeight: '700', marginTop: 2 },
     tithiNameSmall: { fontSize: 8, color: '#999', textTransform: 'uppercase' },
     content: { gap: 16 },
+    ekadashiAlert: {
+        flexDirection: 'row', alignItems: 'center', backgroundColor: '#FFF8E7',
+        padding: 12, borderRadius: 12, borderWidth: 1, borderColor: '#F3E5AB',
+        marginBottom: 4, gap: 10, justifyContent: 'center'
+    },
+    ekadashiAlertText: { fontSize: 14, fontWeight: '700', color: '#B8860B', flex: 1 },
     mainInsight: {
         backgroundColor: '#FFF', borderRadius: 16, padding: 24, alignItems: 'center',
         borderWidth: 1, borderColor: '#EBE7E0',
